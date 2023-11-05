@@ -1,0 +1,412 @@
+// fonts and variables
+
+@font-face {
+  font-family: Rubik;
+  src: url(../fonts/Rubik-VariableFont_wght.woff);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins.woff);
+}
+
+$main-font: Rubik;
+$heading-font: Poppins;
+$light: #dee3e4;
+$dark: #212529;
+$dark-text: #4c4d4d;
+$light-text: #6c757d;
+$primary: #f5df4e;
+$aboutBg: #f0f0f0;
+$widBg: #f8f9fa;
+
+// animations
+@keyframes fadeInTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// button links
+.button {
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: $dark;
+  background-color: $primary;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+// main Code
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $main-font;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+div.introContainer {
+  width: 100%;
+  height: 100vh;
+
+  > div {
+    &.introBg {
+      width: inherit;
+      height: inherit;
+      background: url(../media/intro-bg.jpg) center no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      filter: brightness(0.7);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    &.menuTop {
+      width: 100%;
+      height: 65px;
+      padding: 0 100px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      transition: all 0.25s ease;
+
+      &.menuTopBlur {
+        backdrop-filter: blur(20px);
+        background-color: #0000007c;
+      }
+
+      > nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        > h1 {
+          font-size: 28px;
+          font-weight: 900;
+          color: $light;
+        }
+
+        > div.menuContainer {
+          width: max-content;
+          column-gap: 20px;
+          display: flex;
+          align-items: center;
+          margin-right: 50px;
+
+          > a {
+            color: $light;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+          }
+
+          > div.menuBtn {
+            width: 25px;
+            height: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            position: relative;
+            z-index: 1000;
+
+            > span {
+              width: 100%;
+              height: 2px;
+              background-color: $light;
+              transition: all 0.25s ease;
+
+              &.menuBarsHide {
+                opacity: 0;
+              }
+
+              &.menuBars1 {
+                transform: rotatez(45deg) translateY(-3px);
+                transform-origin: left;
+                opacity: 1 !important;
+              }
+              &.menuBars2 {
+                transform: rotatez(-45deg) translateY(2px);
+                transform-origin: left;
+                opacity: 1 !important;
+              }
+            }
+          }
+
+          > div.mmHidden {
+            height: 0 !important;
+            opacity: 0 !important;
+          }
+
+          > div.mainMenu {
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.918);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            opacity: 1;
+
+            > ul {
+              list-style: none;
+              font-size: 24px;
+              color: $light;
+              gap: 0.75rem;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              font-weight: 600;
+
+              > li {
+                cursor: pointer;
+                transition: all 0.15s ease;
+
+                &.menuActive {
+                  color: $primary;
+                }
+
+                &:hover {
+                  color: $primary;
+                }
+              }
+            }
+            > div.menuContact {
+              display: flex;
+              column-gap: 1.55rem;
+              align-items: center;
+
+              > a {
+                font-size: 28px;
+                color: $light;
+                text-decoration: none;
+                transition: all 0.15s ease;
+
+                &:hover {
+                  color: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.infoBody {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $light;
+      background-color: rgba(10, 19, 27, 0.575);
+      gap: 15px;
+      position: relative;
+
+      > h3 {
+        font-weight: 800;
+        font-size: 32px;
+      }
+
+      > h2 {
+        font-size: 60px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        font-family: $heading-font;
+
+        > p {
+          text-transform: capitalize;
+          font-family: inherit;
+        }
+
+        > span {
+          animation: fadeInOut 1.5s infinite;
+          font-family: inherit;
+        }
+      }
+
+      > h4 {
+        font-size: 24px;
+      }
+
+      > a {
+        @extend .button;
+        margin-top: 20px;
+      }
+
+      > span {
+        font-size: 24px;
+        position: absolute;
+        left: calc(50% - 9px);
+        bottom: 10px;
+        transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        animation: fadeInTop 1s infinite ease;
+      }
+    }
+  }
+}
+
+div.aboutContainer {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background-color: $aboutBg;
+
+  > div.aboutBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    > div.aboutBodyTop {
+      display: flex;
+      align-items: flex-start;
+      gap: 100px;
+      padding-right: 50px;
+
+      > div.aboutText {
+        color: $dark;
+
+        > h2 {
+          font-size: 24px;
+          font-weight: 500;
+          font-family: $heading-font;
+          line-height: 2;
+
+          > strong {
+            font-family: inherit;
+          }
+        }
+
+        > p {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 2;
+        }
+      }
+
+      > div.aboutLogo {
+        font-family: $heading-font;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+
+        > span {
+          margin: 0 auto;
+          position: relative;
+          font-size: 120px;
+          grid-row: 1;
+          color: $dark-text;
+          line-height: 1;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          content: "";
+          background-color: $primary;
+          font-family: inherit;
+
+          > i {
+            left: -100%;
+            position: absolute;
+            font-style: normal;
+            font-family: inherit;
+          }
+        }
+
+        > p {
+          grid-row: 2;
+          color: $dark;
+          text-align: center;
+          font-size: 28px;
+          text-transform: capitalize;
+        }
+      }
+    }
+    > div.aboutItems {
+      margin-top: 20px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      > div {
+        font-size: 18px;
+        font-family: $heading-font;
+
+        > h4 {
+          font-weight: 500;
+          color: $light-text;
+          margin-bottom: 8px;
+
+          ~ * {
+            color: $dark-text;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+// sections header
+div.sectoinHeader {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+
+  > span {
+    background-color: $primary;
+    color: $dark;
+    padding: 0.25rem 0.5rem;
+    font-weight: 600;
+  }
+
+  > h2 {
+    color: $dark;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: $heading-font;
+  }
+}
