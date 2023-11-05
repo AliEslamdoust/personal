@@ -11,17 +11,8 @@
   to {
     transform: translateY(0);
     opacity: 1; } }
-@keyframes fadeInOut {
-  0% {
-    opacity: 0; }
-  49% {
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 1; } }
-.button, div.introContainer > div.infoBody > a {
-  padding: 1rem 2rem;
+.button, div.introContainer > div.infoBody > a, div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a {
+  padding: 0.75rem 2.25rem;
   text-decoration: none;
   color: #212529;
   background-color: #f5df4e;
@@ -139,11 +130,17 @@ div.introContainer {
             font-weight: 600; }
             div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li {
               cursor: pointer;
-              transition: all 0.15s ease; }
-              div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li.menuActive {
-                color: #f5df4e; }
-              div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li:hover {
-                color: #f5df4e; }
+              transition: all 0.15s ease;
+              width: 100%;
+              text-align: center; }
+              div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > a {
+                text-decoration: none;
+                color: #dee3e4;
+                display: block; }
+                div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > a.menuActive {
+                  color: #f5df4e !important; }
+                div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > a:hover {
+                  color: #f5df4e; }
           div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > div.menuContact {
             display: flex;
             column-gap: 1.55rem;
@@ -179,8 +176,10 @@ div.introContainer {
         text-transform: capitalize;
         font-family: inherit; }
       div.introContainer > div.infoBody > h2 > span {
-        animation: fadeInOut 1.5s infinite;
+        opacity: 1;
         font-family: inherit; }
+        div.introContainer > div.infoBody > h2 > span.hiddenTypePointer {
+          opacity: 0 !important; }
     div.introContainer > div.infoBody > h4 {
       font-size: 24px; }
     div.introContainer > div.infoBody > a {
@@ -199,8 +198,8 @@ div.aboutContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
-  background-color: #f0f0f0; }
+  gap: 100px;
+  background-color: #f8f9fa; }
   div.aboutContainer > div.aboutBody {
     width: 100%;
     display: flex;
@@ -260,7 +259,8 @@ div.aboutContainer {
       justify-content: space-between; }
       div.aboutContainer > div.aboutBody > div.aboutItems > div {
         font-size: 18px;
-        font-family: Poppins; }
+        font-family: Poppins;
+        flex-grow: 1; }
         div.aboutContainer > div.aboutBody > div.aboutItems > div > h4 {
           font-weight: 500;
           color: #6c757d;
@@ -285,5 +285,139 @@ div.sectoinHeader {
     font-size: 40px;
     font-weight: 900;
     font-family: Poppins; }
+
+div.widContainer {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  gap: 100px; }
+  div.widContainer > div.widBody {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: stretch; }
+    div.widContainer > div.widBody > div.widItem {
+      width: calc(33.33% - 10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 50px 30px;
+      border: 1px solid #6c757d;
+      border-radius: 5px;
+      color: #212529;
+      transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1); }
+      div.widContainer > div.widBody > div.widItem:hover {
+        transform: scale(0.98);
+        background-color: #d8d8d8; }
+      div.widContainer > div.widBody > div.widItem > i {
+        font-style: normal;
+        font-size: 60px;
+        color: #deb887;
+        margin-bottom: 30px; }
+      div.widContainer > div.widBody > div.widItem > h4 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        font-family: Poppins; }
+      div.widContainer > div.widBody > div.widItem > p {
+        font-size: 18px;
+        line-height: 1.4; }
+
+div.resumeContainer {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  gap: 100px; }
+  div.resumeContainer > div.resumeBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px; }
+    div.resumeContainer > div.resumeBody > div.resumeBodyTop {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems {
+        width: 45%;
+        color: #212529; }
+        div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > h3 {
+          font-family: Poppins;
+          font-size: 24px;
+          margin-bottom: 10px; }
+        div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div {
+          border-left: 2px solid #deb887;
+          padding: 20px 0 0 10px; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div > h4 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 5px; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div > h5 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.6; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div > p {
+            font-size: 18px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #6c757d;
+            line-height: 1.6; }
+    div.resumeContainer > div.resumeBody > div.resumeBodyBottom {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: #212529; }
+      div.resumeContainer > div.resumeBody > div.resumeBodyBottom > h3 {
+        font-size: 24px;
+        font-family: Poppins; }
+      div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+        font-family: Poppins; }
+        div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem > div.skillHeader {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem > div.skillBar {
+            width: 100%;
+            display: flex;
+            border-radius: 999px;
+            height: 8px;
+            background-color: #e9ecef;
+            overflow: hidden; }
+            div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem > div.skillBar > span.skillProgress {
+              width: 75%;
+              background-color: #deb887;
+              background-image: linear-gradient(-45deg, transparent 33%, rgba(255, 255, 255, 0.5) 33%, rgba(255, 255, 255, 0.5) 66%, transparent 66%, transparent 100%);
+              background-size: 16px; }
+      div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a {
+        background-color: transparent;
+        border: 1px solid #212529;
+        width: max-content;
+        margin: 30px auto 0 auto;
+        transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1); }
+        div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a:hover {
+          color: #dee3e4;
+          background-color: #212529; }
 
 /*# sourceMappingURL=main.css.map */

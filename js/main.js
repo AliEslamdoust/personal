@@ -1,6 +1,7 @@
 // menu Activator
 let menuBtn = document.getElementById("menuBtn");
 let menu = document.getElementById("mainMenu");
+
 menuBtn.addEventListener("click", function () {
   let menuBar0 = document.getElementById("menuBar1");
   let menuBar1 = document.getElementById("menuBar2");
@@ -16,6 +17,7 @@ let containers = document.querySelectorAll(".container");
 let menuItems = document.querySelectorAll(".menuItem");
 let distanceFromTop;
 let menuTop = document.getElementById("menuTop");
+
 window.addEventListener("scroll", () => {
   if (containers[0].getBoundingClientRect().top < 0) {
     menuTop.classList.add("menuTopBlur");
@@ -24,10 +26,11 @@ window.addEventListener("scroll", () => {
   }
   changeActiveItem();
 });
+
 function changeActiveItem() {
   containers.forEach((element, index) => {
     distanceFromTop = element.getBoundingClientRect().top;
-    if (distanceFromTop <= 20) {
+    if (distanceFromTop <= 70) {
       for (let i = 0; i < containers.length; i++) {
         if (
           containers[i].getBoundingClientRect().top < distanceFromTop ||
@@ -40,6 +43,7 @@ function changeActiveItem() {
     }
   });
 }
+
 changeActiveItem();
 
 // typing Animation
@@ -48,7 +52,12 @@ let typeOutput = document.getElementById("TypingAnimation");
 let character = 0;
 let word = 0;
 let typingTime = 100;
-let typingDelay = 2000;
+let typingDelay = 3000;
+
+setInterval(() => {
+  document.getElementById("typePointer").classList.toggle("hiddenTypePointer");
+}, 555);
+
 function type() {
   if (character < texts[word].length) {
     typeOutput.innerHTML = texts[word].slice(0, character + 1);
@@ -58,6 +67,7 @@ function type() {
     setTimeout(erase, typingDelay);
   }
 }
+
 function erase() {
   if (character > 0) {
     typeOutput.innerHTML = texts[word].slice(0, character - 1);
@@ -69,7 +79,8 @@ function erase() {
     } else {
       word = 0;
     }
-    setTimeout(type, typingDelay / 2);
+    setTimeout(type, typingDelay / 3);
   }
 }
+
 type();
