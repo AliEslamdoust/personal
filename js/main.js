@@ -19,14 +19,16 @@ let distanceFromTop;
 let menuTop = document.getElementById("menuTop");
 
 window.addEventListener("scroll", () => {
+  changeMenuBlur();
+  changeActiveItem();
+});
+function changeMenuBlur() {
   if (containers[0].getBoundingClientRect().top < 0) {
     menuTop.classList.add("menuTopBlur");
   } else {
     menuTop.classList.remove("menuTopBlur");
   }
-  changeActiveItem();
-});
-
+}
 function changeActiveItem() {
   containers.forEach((element, index) => {
     distanceFromTop = element.getBoundingClientRect().top;
@@ -41,10 +43,19 @@ function changeActiveItem() {
       }
       menuItems[index].classList.add("menuActive");
     }
-  });
+  }, 0);
 }
 
 changeActiveItem();
+
+// containers link to menuitems
+$(menuItems).each(function (index) {
+  $(this).click(function () {
+    $("html,body").animate({
+      scrollTop: $(containers[index]).offset().top,
+    });
+  });
+});
 
 // typing Animation
 let texts = ["Ali Eslamdoust", "A Web Developer", "A Designer"];
@@ -84,3 +95,23 @@ function erase() {
 }
 
 type();
+
+// portfolio items
+let portItems = document.querySelectorAll(".portfolioItem");
+let portBtns = document.querySelectorAll(".portfolioTopics");
+portBtns.forEach((element) => {
+  element.addEventListener("click", function () {
+    changePortfolioItems();
+  });
+});
+function changePortfolioItems() {
+  portItems.forEach((element) => {
+    element.classList.add("portfolioHide");
+  });
+}
+function hidePortfolio() {
+  setTimeout(function () {
+    porli;
+    hidePortfolio();
+  }, 500);
+}

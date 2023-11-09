@@ -12,6 +12,7 @@
 $main-font: Rubik;
 $heading-font: Poppins;
 $light: #dee3e4;
+$darklight: #c8cdce;
 $dark: #212529;
 $dark-text: #4c4d4d;
 $light-text: #6c757d;
@@ -21,6 +22,7 @@ $lightBg: #d8d8d8;
 $widBg: #f8f9fa;
 $lightLogo: #deb887;
 $progressbg: #e9ecef;
+$white: #fff;
 
 // animations
 @keyframes fadeInTop {
@@ -596,6 +598,133 @@ div.resumeContainer {
         &:hover {
           color: $light;
           background-color: $dark;
+        }
+      }
+    }
+  }
+}
+
+div.portfolioContainer {
+  width: 100%;
+  padding: 100px;
+  gap: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: $aboutBg;
+
+  > div.portfolioBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > div.portfolioBodyTop {
+      width: 100%;
+      gap: 50px;
+
+      > ul {
+        justify-content: center;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        list-style: none;
+        font-weight: 500;
+
+        > li {
+          color: $dark;
+          border-bottom: 2px solid transparent;
+          cursor: pointer;
+          padding: 10px 0;
+
+          &:hover {
+            border-color: $primary;
+          }
+
+          &.portActive {
+            font-weight: 600 !important;
+            border-color: $primary;
+          }
+        }
+      }
+    }
+
+    > div.portfolioBodyBottom {
+      width: 100%;
+      margin-top: 30px;
+
+      > ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 30px;
+
+        > li {
+          display: flex;
+          position: relative;
+          width: calc(33.33% - 20px);
+          overflow: hidden;
+          cursor: pointer;
+          text-align: center;
+          transition: all 0.15s ease;
+
+          &.portfolioHide {
+            opacity: 0 !important;
+            transform: scale(0) !important;
+          }
+
+          &:hover img {
+            filter: blur(2px);
+            transform: scale(1.2);
+          }
+
+          &:hover div.porfolioItemAbsolute {
+            opacity: 1;
+          }
+
+          > img {
+            width: 100%;
+            transition: all 0.25s ease;
+            aspect-ratio: 1/1;
+          }
+
+          > div.porfolioItemAbsolute {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: all 0.25s ease;
+
+            > i {
+              font-style: normal;
+              font-size: 40px;
+              color: $lightLogo;
+            }
+
+            > h3 {
+              margin-top: 15px;
+              font-family: $heading-font;
+              font-size: 22px;
+              color: $white;
+              font-weight: 500;
+              line-height: 1;
+            }
+
+            > h4 {
+              margin-top: 5px;
+              line-height: 1;
+              font-family: $heading-font;
+              font-weight: 500;
+              font-size: 18px;
+              color: $light;
+            }
+          }
         }
       }
     }

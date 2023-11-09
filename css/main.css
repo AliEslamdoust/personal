@@ -420,4 +420,96 @@ div.resumeContainer {
           color: #dee3e4;
           background-color: #212529; }
 
+div.portfolioContainer {
+  width: 100%;
+  padding: 100px;
+  gap: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0; }
+  div.portfolioContainer > div.portfolioBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop {
+      width: 100%;
+      gap: 50px; }
+      div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul {
+        justify-content: center;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        list-style: none;
+        font-weight: 500; }
+        div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul > li {
+          color: #212529;
+          border-bottom: 2px solid transparent;
+          cursor: pointer;
+          padding: 10px 0; }
+          div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul > li:hover {
+            border-color: #f5df4e; }
+          div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul > li.portActive {
+            font-weight: 600 !important;
+            border-color: #f5df4e; }
+    div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom {
+      width: 100%;
+      margin-top: 30px; }
+      div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 30px; }
+        div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li {
+          display: flex;
+          position: relative;
+          width: calc(33.33% - 20px);
+          overflow: hidden;
+          cursor: pointer;
+          text-align: center;
+          transition: all 0.15s ease; }
+          div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li.portfolioHide {
+            opacity: 0 !important;
+            transform: scale(0) !important; }
+          div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li:hover img {
+            filter: blur(2px);
+            transform: scale(1.2); }
+          div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li:hover div.porfolioItemAbsolute {
+            opacity: 1; }
+          div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li > img {
+            width: 100%;
+            transition: all 0.25s ease;
+            aspect-ratio: 1/1; }
+          div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li > div.porfolioItemAbsolute {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: all 0.25s ease; }
+            div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li > div.porfolioItemAbsolute > i {
+              font-style: normal;
+              font-size: 40px;
+              color: #deb887; }
+            div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li > div.porfolioItemAbsolute > h3 {
+              margin-top: 15px;
+              font-family: Poppins;
+              font-size: 22px;
+              color: #fff;
+              font-weight: 500;
+              line-height: 1; }
+            div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li > div.porfolioItemAbsolute > h4 {
+              margin-top: 5px;
+              line-height: 1;
+              font-family: Poppins;
+              font-weight: 500;
+              font-size: 18px;
+              color: #dee3e4; }
+
 /*# sourceMappingURL=main.css.map */
