@@ -21,14 +21,14 @@
             </div>
             <div class="mainMenu mmHidden" id="mainMenu">
               <ul>
-                <li><a href="#" class="menuItem">Home</a></li>
-                <li><a href="#" class="menuItem">About Me</a></li>
-                <li><a href="#" class="menuItem">What I Do</a></li>
-                <li><a href="#" class="menuItem">Resume</a></li>
-                <li><a href="#" class="menuItem">Portfolio</a></li>
-                <li><a href="#" class="menuItem">FAQ</a></li>
-                <li><a href="#" class="menuItem">Client Speak</a></li>
-                <li><a href="#" class="menuItem">Contact Me</a></li>
+                <li><div class="menuItem">Home</d></li>
+                <li><div class="menuItem">About Me</d></li>
+                <li><div class="menuItem">What I Do</d></li>
+                <li><div class="menuItem">Resume</d></li>
+                <li><div class="menuItem">Portfolio</d></li>
+                <li><div class="menuItem">FAQ</d></li>
+                <li><div class="menuItem">Client Speak</d></li>
+                <li><div class="menuItem">Contact Me</d></li>
               </ul>
               <div class="menuContact">
                 <a href="#" class="fa-brands fa-x-twitter"></a>
@@ -290,15 +290,25 @@
         <div class="portfolioBodyTop">
           <ul>
             <li class="portfolioTopics" portfolioActivator="All">All</li>
-            <li class="portfolioTopics" portfolioActivator="Detailed">Detailed Projects</li>
-            <li class="portfolioTopics" portfolioActivator="Designs">Designs</li>
-            <li class="portfolioTopics" portfolioActivator="Mockups">Mockups</li>
+            <li class="portfolioTopics" portfolioActivator="Detailed">
+              Detailed Projects
+            </li>
+            <li class="portfolioTopics" portfolioActivator="Designs">
+              Designs
+            </li>
+            <li class="portfolioTopics" portfolioActivator="Mockups">
+              Mockups
+            </li>
           </ul>
         </div>
         <div class="portfolioBodyBottom">
-          <ul>
-            <li class="portfolioItem" portfolioItem="Detailed">
-              <img src="./media/project-3.jpg" alt="" />
+          <ul id="portfolioContainer">
+            <li
+              class="portfolioItem"
+              portfolioItem="Detailed"
+              id="portfolioItem"
+            >
+              <img src="./media/project-1.jpg" alt="" />
               <div class="porfolioItemAbsolute">
                 <i class="fa-duotone fa-file"></i>
                 <h3>Portfolio Item</h3>
@@ -306,7 +316,7 @@
               </div>
             </li>
             <li class="portfolioItem" portfolioItem="Designs">
-              <img src="./media/project-3.jpg" alt="" />
+              <img src="./media/project-2.jpg" alt="" />
               <div class="porfolioItemAbsolute">
                 <i class="fa-duotone fa-file"></i>
                 <h3>Portfolio Item</h3>
@@ -322,7 +332,7 @@
               </div>
             </li>
             <li class="portfolioItem" portfolioItem="Mockups">
-              <img src="./media/project-3.jpg" alt="" />
+              <img src="./media/project-4.jpg" alt="" />
               <div class="porfolioItemAbsolute">
                 <i class="fa-duotone fa-file"></i>
                 <h3>Portfolio Item</h3>
@@ -330,7 +340,7 @@
               </div>
             </li>
             <li class="portfolioItem" portfolioItem="Detailed">
-              <img src="./media/project-3.jpg" alt="" />
+              <img src="./media/project-5.jpg" alt="" />
               <div class="porfolioItemAbsolute">
                 <i class="fa-duotone fa-file"></i>
                 <h3>Portfolio Item</h3>
@@ -338,7 +348,7 @@
               </div>
             </li>
             <li class="portfolioItem" portfolioItem="Mockups">
-              <img src="./media/project-3.jpg" alt="" />
+              <img src="./media/project-6.jpg" alt="" />
               <div class="porfolioItemAbsolute">
                 <i class="fa-duotone fa-file"></i>
                 <h3>Portfolio Item</h3>
@@ -348,6 +358,12 @@
           </ul>
         </div>
       </div>
+    </div>
+    <div class="portfolioHire">
+      <img src="./media/intro-bg-2.jpg" alt="">
+      <div class="portfolioHContent">
+      <h2>Interested in working with me?</h2>
+      <button id="hireMe">Hire Me!</button></div>
     </div>
     <div class="introContainer container" style="background-color: brown"></div>
     <div

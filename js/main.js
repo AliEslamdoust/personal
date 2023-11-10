@@ -97,21 +97,85 @@ function erase() {
 type();
 
 // portfolio items
+
 let portItems = document.querySelectorAll(".portfolioItem");
 let portBtns = document.querySelectorAll(".portfolioTopics");
+let currentPortfolio = "All";
+
+// All Btn is active by default
+portBtns[0].classList.add("portActive");
+
 portBtns.forEach((element) => {
   element.addEventListener("click", function () {
-    changePortfolioItems();
+    switch (this.getAttribute("portfolioActivator")) {
+      case "All":
+        portItems.forEach((elem) => {
+          elem.classList.remove("portfolioHide");
+        });
+        deActivePortfolioBtn();
+        this.classList.add("portActive");
+        break;
+
+      case "Detailed":
+        changePortfolio("Detailed");
+        this.classList.add("portActive");
+        break;
+
+      case "Designs":
+        changePortfolio("Designs");
+        this.classList.add("portActive");
+        break;
+
+      case "Mockups":
+        changePortfolio("Mockups");
+        this.classList.add("portActive");
+        break;
+    }
   });
 });
-function changePortfolioItems() {
+
+function changePortfolio(attribute) {
+  hidePortfolioItems();
+  showPortfolioItems(attribute);
+  deActivePortfolioBtn();
+}
+
+function hidePortfolioItems() {
   portItems.forEach((element) => {
     element.classList.add("portfolioHide");
   });
 }
-function hidePortfolio() {
-  setTimeout(function () {
-    porli;
-    hidePortfolio();
-  }, 500);
+
+function showPortfolioItems(currentElement) {
+  portItems.forEach((element, index) => {
+    if (element.getAttribute("portfolioItem") == currentElement) {
+      portItems[index].classList.remove("portfolioHide");
+      currentPortfolio = `${currentElement}`;
+    }
+  });
 }
+
+function deActivePortfolioBtn() {
+  portBtns.forEach((element) => element.classList.remove("portActive"));
+}
+
+// setting the portfolio containers min height  to one of it's childerens default height so it doesn't close after each time a button is clicked (smoother animation)
+
+function portfolioMainHeight() {
+  let samplePortfolio = document.getElementById("portfolioItem");
+  let sampleHeight = samplePortfolio.offsetHeight;
+  let portfolioContainer = document.getElementById("portfolioContainer");
+  portfolioContainer.style.minHeight = sampleHeight + 30 + "px";
+}
+portfolioMainHeight();
+
+// scroll to hire section
+$("#hireMe").click(function () {
+  $("html, body").animate({
+    scrollTop:
+      $(containers[containers.length - 1]).offset().top +
+      $(containers[containers.length - 1]).height(),
+  });
+});
+
+// hire section parallax

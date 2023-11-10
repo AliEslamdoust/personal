@@ -11,13 +11,14 @@
   to {
     transform: translateY(0);
     opacity: 1; } }
-.button, div.introContainer > div.infoBody > a, div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a {
+.button, div.introContainer > div.infoBody > a, div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a, div.portfolioHire > div.portfolioHContent > button {
   padding: 0.75rem 2.25rem;
   text-decoration: none;
   color: #212529;
   background-color: #f5df4e;
   font-size: 18px;
-  font-weight: 600; }
+  font-weight: 600;
+  cursor: pointer; }
 
 * {
   padding: 0;
@@ -133,13 +134,13 @@ div.introContainer {
               transition: all 0.15s ease;
               width: 100%;
               text-align: center; }
-              div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > a {
+              div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > div {
                 text-decoration: none;
                 color: #dee3e4;
                 display: block; }
-                div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > a.menuActive {
+                div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > div.menuActive {
                   color: #f5df4e !important; }
-                div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > a:hover {
+                div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > div:hover {
                   color: #f5df4e; }
           div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > div.menuContact {
             display: flex;
@@ -438,19 +439,18 @@ div.portfolioContainer {
       div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul {
         justify-content: center;
         display: flex;
-        gap: 20px;
         align-items: center;
         list-style: none;
-        font-weight: 500; }
+        font-weight: 600; }
         div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul > li {
-          color: #212529;
+          color: #4c4d4d;
           border-bottom: 2px solid transparent;
           cursor: pointer;
-          padding: 10px 0; }
+          padding: 10px 10px; }
           div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul > li:hover {
             border-color: #f5df4e; }
           div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul > li.portActive {
-            font-weight: 600 !important;
+            color: #212529;
             border-color: #f5df4e; }
     div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom {
       width: 100%;
@@ -458,19 +458,21 @@ div.portfolioContainer {
       div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
-        gap: 30px; }
+        width: 100%; }
         div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li {
           display: flex;
           position: relative;
-          width: calc(33.33% - 20px);
+          width: calc(33.33% - 30px);
           overflow: hidden;
           cursor: pointer;
           text-align: center;
-          transition: all 0.15s ease; }
+          transition: all 0.15s ease;
+          margin: 15px; }
           div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li.portfolioHide {
             opacity: 0 !important;
-            transform: scale(0) !important; }
+            transform: scale(0) !important;
+            width: 0 !important;
+            margin: 0 !important; }
           div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li:hover img {
             filter: blur(2px);
             transform: scale(1.2); }
@@ -511,5 +513,32 @@ div.portfolioContainer {
               font-weight: 500;
               font-size: 18px;
               color: #dee3e4; }
+
+div.portfolioHire {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  div.portfolioHire > img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    filter: brightness(0.5); }
+  div.portfolioHire > div.portfolioHContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 150px 100px; }
+    div.portfolioHire > div.portfolioHContent > h2 {
+      font-size: 40px;
+      font-family: Poppins;
+      color: #dee3e4; }
+    div.portfolioHire > div.portfolioHContent > button {
+      border: unset;
+      transition: all 0.15s ease; }
+      div.portfolioHire > div.portfolioHContent > button:hover {
+        background-color: #b8a52f; }
 
 /*# sourceMappingURL=main.css.map */
