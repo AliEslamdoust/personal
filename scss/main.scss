@@ -116,6 +116,10 @@ div.introContainer {
             text-decoration: none;
             font-size: 18px;
             font-weight: 600;
+
+            > i {
+              transform: rotatey(180deg);
+            }
           }
 
           > div.menuBtn {
@@ -769,4 +773,133 @@ div.portfolioHire {
       }
     }
   }
+}
+
+div.faqContainer {
+  width: 100%;
+  padding: 100px;
+  background-color: $aboutBg;
+
+  > div.faqBody {
+    display: flex;
+    width: 100%;
+
+    > div.faqLeft {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 50%;
+
+      > div.faqHeader {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: $dark;
+
+        > span {
+          padding: 4px 8px;
+          background-color: $primary;
+          width: max-content;
+          text-transform: uppercase;
+        }
+
+        > h2 {
+          font-size: 32px;
+          font-family: $heading-font;
+        }
+      }
+
+      > div.faqMore {
+        width: 100%;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+
+        > div.faqItem {
+          user-select: none;
+          width: 100%;
+          padding: 20px 0 20px 10px;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          transition: all 0.15s ease;
+          color: $light-text;
+          cursor: pointer;
+
+          &:nth-last-child(1) {
+            &::after {
+              display: none;
+            }
+          }
+
+          &.faqActive {
+            color: $dark;
+
+            span {
+              transform: rotate(180deg);
+            }
+
+            p {
+              margin-top: 10px;
+              height: max-content;
+            }
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 80%;
+            left: 40px;
+            height: 1px;
+            background-color: $light-text;
+          }
+
+          > div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: inherit;
+            transition: inherit;
+
+            > span {
+              transition: inherit;
+              font-size: 16px;
+            }
+
+            > h3 {
+              transition: inherit;
+              font-size: 18px;
+              font-family: $heading-font;
+            }
+          }
+
+          > p {
+            transition: all 0.15s linear;
+            padding: 0 30px;
+            color: $dark;
+            font-weight: 500;
+            overflow: hidden;
+            height: 0;
+          }
+        }
+      }
+    }
+
+    > div.faqRight {
+      width: 50%;
+      align-self: stretch;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      transition: all 0.15s ease;
+    }
+  }
+}
+
+div.cSContainer {
+  background-color: $widBg;
+  width: 100%;
+  padding: 100px;
 }

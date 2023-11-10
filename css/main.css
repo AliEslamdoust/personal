@@ -75,6 +75,8 @@ div.introContainer {
           text-decoration: none;
           font-size: 18px;
           font-weight: 600; }
+          div.introContainer > div.menuTop > nav > div.menuContainer > a > i {
+            transform: rotatey(180deg); }
         div.introContainer > div.menuTop > nav > div.menuContainer > div.menuBtn {
           width: 25px;
           height: 16px;
@@ -540,5 +542,96 @@ div.portfolioHire {
       transition: all 0.15s ease; }
       div.portfolioHire > div.portfolioHContent > button:hover {
         background-color: #b8a52f; }
+
+div.faqContainer {
+  width: 100%;
+  padding: 100px;
+  background-color: #f0f0f0; }
+  div.faqContainer > div.faqBody {
+    display: flex;
+    width: 100%; }
+    div.faqContainer > div.faqBody > div.faqLeft {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 50%; }
+      div.faqContainer > div.faqBody > div.faqLeft > div.faqHeader {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: #212529; }
+        div.faqContainer > div.faqBody > div.faqLeft > div.faqHeader > span {
+          padding: 4px 8px;
+          background-color: #f5df4e;
+          width: max-content;
+          text-transform: uppercase; }
+        div.faqContainer > div.faqBody > div.faqLeft > div.faqHeader > h2 {
+          font-size: 32px;
+          font-family: Poppins; }
+      div.faqContainer > div.faqBody > div.faqLeft > div.faqMore {
+        width: 100%;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column; }
+        div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem {
+          user-select: none;
+          width: 100%;
+          padding: 20px 0 20px 10px;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          transition: all 0.15s ease;
+          color: #6c757d;
+          cursor: pointer; }
+          div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem:nth-last-child(1)::after {
+            display: none; }
+          div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem.faqActive {
+            color: #212529; }
+            div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem.faqActive span {
+              transform: rotate(180deg); }
+            div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem.faqActive p {
+              margin-top: 10px;
+              height: max-content; }
+          div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 80%;
+            left: 40px;
+            height: 1px;
+            background-color: #6c757d; }
+          div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem > div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: inherit;
+            transition: inherit; }
+            div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem > div > span {
+              transition: inherit;
+              font-size: 16px; }
+            div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem > div > h3 {
+              transition: inherit;
+              font-size: 18px;
+              font-family: Poppins; }
+          div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem > p {
+            transition: all 0.15s linear;
+            padding: 0 30px;
+            color: #212529;
+            font-weight: 500;
+            overflow: hidden;
+            height: 0; }
+    div.faqContainer > div.faqBody > div.faqRight {
+      width: 50%;
+      align-self: stretch;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      transition: all 0.15s ease; }
+
+div.cSContainer {
+  background-color: #f8f9fa;
+  width: 100%;
+  padding: 100px; }
 
 /*# sourceMappingURL=main.css.map */

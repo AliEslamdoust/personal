@@ -1,15 +1,11 @@
 // menu Activator
 let menuBtn = document.getElementById("menuBtn");
-let menu = document.getElementById("mainMenu");
 
 menuBtn.addEventListener("click", function () {
-  let menuBar0 = document.getElementById("menuBar1");
-  let menuBar1 = document.getElementById("menuBar2");
-  let menuBar2 = document.getElementById("menuBar3");
-  menuBar0.classList.toggle("menuBars1");
-  menuBar1.classList.toggle("menuBarsHide");
-  menuBar2.classList.toggle("menuBars2");
-  menu.classList.toggle("mmHidden");
+  document.getElementById("menuBar1").classList.toggle("menuBars1");
+  document.getElementById("menuBar2").classList.toggle("menuBarsHide");
+  document.getElementById("menuBar3").classList.toggle("menuBars2");
+  document.getElementById("mainMenu").classList.toggle("mmHidden");
 });
 
 // scroll spy
@@ -45,7 +41,7 @@ function changeActiveItem() {
     }
   }, 0);
 }
-
+changeMenuBlur();
 changeActiveItem();
 
 // containers link to menuitems
@@ -178,4 +174,33 @@ $("#hireMe").click(function () {
   });
 });
 
-// hire section parallax
+// FAQ Items
+let faqItems = document.querySelectorAll(".faqItem");
+let currentFaq = -1;
+
+faqItems.forEach((elem, index) => {
+  elem.addEventListener("click", function () {
+    removeActiveFAQ();
+    if (currentFaq != index) {
+      currentFaq = index;
+      this.classList.add("faqActive");
+    } else {
+      currentFaq = -1;
+    }
+  });
+});
+let currentHeight = 0;
+function addHeight(order) {
+  if (currentHeight < faqHeight[order]) {
+    currentHeight++;
+    faqText[order].style.height = currentHeight + "px";
+    setTimeout(addHeight, 1);
+  } else if (currentHeight == faqHeight[order]) {
+    faqText[order].removeAttribute("style");
+    faqText[order].classList.add("faqTextActive");
+  }
+}
+
+function removeActiveFAQ() {
+  faqItems.forEach((elem) => elem.classList.remove("faqActive"));
+}
