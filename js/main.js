@@ -45,11 +45,21 @@ changeMenuBlur();
 changeActiveItem();
 
 // containers link to menuitems
-$(menuItems).each(function (index) {
-  $(this).click(function () {
-    $("html,body").animate({
-      scrollTop: $(containers[index]).offset().top,
-    });
+menuItems.forEach((elem, index) => {
+  elem.addEventListener("click", function () {
+    if ($(containers[index]).offset().top != 0) {
+      window.scroll({
+        top: $(containers[index]).offset().top - 65,
+        left: 0,
+        behavior: "smooth",
+      });
+    } else {
+      window.scroll({
+        top: $(containers[index]).offset().top,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
   });
 });
 
@@ -166,14 +176,17 @@ function portfolioMainHeight() {
 portfolioMainHeight();
 
 // scroll to hire section
-$("#hireMe").click(function () {
-  $("html, body").animate({
-    scrollTop:
+document.getElementById("hireMe").addEventListener("click", function () {
+  console.log(containers[containers.length - 1].getBoundingClientRect());
+  window.scroll({
+    top:
       $(containers[containers.length - 1]).offset().top +
-      $(containers[containers.length - 1]).height(),
+      containers[containers.length - 1].getBoundingClientRect().height +
+      65,
+    left: 0,
+    behavior: "smooth",
   });
 });
-
 // FAQ Items
 let faqItems = document.querySelectorAll(".faqItem");
 let currentFaq = -1;
@@ -203,4 +216,119 @@ function addHeight(order) {
 
 function removeActiveFAQ() {
   faqItems.forEach((elem) => elem.classList.remove("faqActive"));
+}
+
+// slider
+
+// slider fixed height
+let swiperContainer = document.getElementById("swiperContainer");
+let sliderContainer = document.getElementById("sliderContainer");
+let swiperHeight = sliderContainer.getBoundingClientRect().height;
+swiperContainer.style.height = swiperHeight + "px";
+
+// create pagintation buttons
+let sliders = document.querySelectorAll(".slider");
+let paginationContainer = document.getElementById("pagination");
+for (let i = 1; i <= sliders.length; i++) {
+  let span = document.createElement("span");
+  paginationContainer.appendChild(span);
+}
+let sliderDelay = 2500;
+let sliderIndex = 0;
+let slidertimeout;
+
+function callSliderTimeout() {
+  slidertimeout = setTimeout(moveSlider, sliderDelay);
+}
+function clearSliderTimout() {
+  clearTimeout(slidertimeout);
+}
+function moveSlider() {
+  if (sliderIndex < sliders.length - 1) {
+    sliderIndex++;
+    changePagination();
+    sliderContainer.className = `slidersContainer translateX-${sliderIndex}`;
+    callSliderTimeout();
+  } else {
+    sliderIndex = -1;
+    moveSlider();
+  }
+}
+callSliderTimeout();
+
+// slider next and prev buttons
+let sliderNext = document.getElementById("sliderNext");
+let sliderPrev = document.getElementById("sliderPrev");
+
+sliderNext.addEventListener("click", () => {
+  slideNext();
+});
+
+sliderPrev.addEventListener("click", () => {
+  slidePrev();
+});
+
+function slideNext() {
+  clearSliderTimout();
+  moveSlider();
+}
+
+function slidePrev() {
+  if (sliderIndex == 0) {
+    sliderIndex = sliders.length - 2;
+    console.log(sliderIndex);
+  } else {
+    sliderIndex -= 2;
+  }
+  clearSliderTimout();
+  moveSlider();
+}
+
+// pagination
+let paginationBtn = document.querySelectorAll("#pagination>span");
+function changePagination() {
+  paginationBtn.forEach((elem, index) => {
+    elem.classList.remove("activePg");
+    if (sliderIndex == index) {
+      elem.classList.add("activePg");
+    }
+    elem.addEventListener("click", function () {
+      sliderIndex = index - 1;
+      clearSliderTimout();
+      moveSlider();
+    });
+  });
+}
+changePagination();
+
+// slider using mouse
+
+let sliderWidth = sliderContainer.getBoundingClientRect().width;
+let sliderIsMovingWithMouse = false;
+sliderContainer.addEventListener("mousedown", function (e) {
+  let sliderStartPosition = e.offsetX;
+  sliderIsMovingWithMouse = true;
+  console.log(e.offsetX);
+
+  this.addEventListener("mousemove", function (evenet) {
+    if (sliderIsMovingWithMouse) {
+      let sliderMovement = evenet.offsetX - sliderStartPosition;
+      if (Math.abs(sliderMovement) >= sliderWidth / 2) {
+        sliderContainer.style.transform = `translateX(${sliderMovement}px)`;
+        if (sliderMovement < 0) {
+          sliderIsMovingWithMouse = false;
+          slideNext();
+        } else {
+          sliderIsMovingWithMouse = false;
+          slidePrev();
+        }
+      }
+    }
+  });
+});
+sliderContainer.addEventListener("mouseup", clearMovingWithMouse);
+
+function clearMovingWithMouse() {
+  sliderIsMovingWithMouse = false;
+  sliderContainer.removeAttribute("style");
 }

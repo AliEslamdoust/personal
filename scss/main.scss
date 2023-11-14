@@ -14,6 +14,7 @@ $heading-font: Poppins;
 $light: #dee3e4;
 $darklight: #c8cdce;
 $dark: #212529;
+$verydark: #111418;
 $dark-text: #4c4d4d;
 $light-text: #6c757d;
 $primary: #f5df4e;
@@ -23,6 +24,8 @@ $widBg: #f8f9fa;
 $lightLogo: #deb887;
 $progressbg: #e9ecef;
 $white: #fff;
+$graybg: #939597;
+$iconLightBg: #fafafa;
 
 // animations
 @keyframes fadeInTop {
@@ -778,7 +781,7 @@ div.portfolioHire {
 div.faqContainer {
   width: 100%;
   padding: 100px;
-  background-color: $aboutBg;
+  background-color: $widBg;
 
   > div.faqBody {
     display: flex;
@@ -899,7 +902,332 @@ div.faqContainer {
 }
 
 div.cSContainer {
-  background-color: $widBg;
+  background-color: $graybg;
   width: 100%;
   padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    color: $widBg !important;
+  }
+
+  > div.swiperContainer {
+    margin-top: 50px;
+    width: 70%;
+    display: flex;
+    position: relative;
+    transition: all 0.25s ease;
+
+    &:hover div.sliderControl {
+      opacity: 1;
+    }
+
+    * {
+      transition: inherit;
+    }
+
+    > div.sliderContainer {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      > div.slidersContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        width: 100%;
+
+        > div.slider {
+          width: 100%;
+          min-width: 100%;
+          padding: 2rem;
+          gap: 1rem;
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 100%;
+          align-items: center;
+          user-select: none;
+
+          > q {
+            letter-spacing: 1px;
+            line-height: 1.6;
+            font-size: 20px;
+            color: $widBg;
+            font-weight: 600;
+            text-align: center;
+          }
+
+          > img {
+            width: 65px;
+            border-radius: 50%;
+          }
+
+          > h4 {
+            font-weight: 500;
+            font-family: $heading-font;
+            font-size: 24px;
+            color: $white;
+          }
+
+          > span {
+            margin-top: -0.5rem;
+            color: $widBg;
+            font-family: $heading-font;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    > div.sliderControl {
+      width: 100%;
+      height: 40px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translatey(-50%);
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      opacity: 0;
+
+      > div {
+        background-color: $iconLightBg;
+        width: 40px;
+        height: inherit;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    > div.pagination {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+
+      > span {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: $widBg;
+        cursor: pointer;
+
+        &.activePg {
+          background-color: $primary !important;
+          width: 20px !important;
+        }
+      }
+    }
+  }
+}
+
+$i: 0;
+@while $i<=50 {
+  .translateX-#{$i} {
+    transform: translateX(calc(-#{$i}* 100%)) !important;
+  }
+  $i: $i + 1;
+}
+
+div.contactContainer {
+  width: 100%;
+  padding: 100px;
+  background-color: $primary;
+  color: $dark;
+
+  > div.contactBody {
+    width: 100%;
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+
+    > div.contactBodyLeft {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      > h2 {
+        font-size: 40px;
+        font-family: $heading-font;
+      }
+
+      > p {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.6;
+      }
+
+      > div.contactTextContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          > h3 {
+            font-size: 24px;
+            font-family: $heading-font;
+          }
+
+          > a,
+          span {
+            font-size: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            color: $dark;
+            display: inline-block;
+            width: max-content;
+          }
+        }
+      }
+
+      > div.contactIcons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+
+        > a {
+          display: block;
+          text-decoration: none;
+          color: $dark;
+          font-size: 24px;
+          transition: all 0.25s ease;
+
+          &:hover {
+            filter: drop-shadow(0 0 1px $dark);
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    > div.contactBodyRight {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: $dark;
+
+      > h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+        font-family: $heading-font;
+      }
+
+      > form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        > label {
+          font-size: 20px;
+          font-weight: 700;
+          margin-top: 10px;
+        }
+
+        > input {
+          all: unset;
+          padding: 0.5rem 1rem;
+          box-sizing: border-box;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+          font-size: 18px;
+          font-family: $heading-font;
+          transition: all 0.25s ease;
+        }
+
+        > textarea {
+          box-sizing: border-box;
+          background-color: unset;
+          border: unset;
+          outline: unset;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+          resize: vertical;
+          margin-bottom: 10px;
+          font-size: 18px;
+          font-family: $heading-font;
+          transition: all 0.25s ease;
+        }
+
+        > input:focus,
+        textarea:focus {
+          border-bottom: 1px solid $dark;
+        }
+
+        > input:valid,
+        textarea:valid {
+          border-bottom: 1px solid rgb(35, 158, 35);
+        }
+
+        > button {
+          @extend .button;
+          width: max-content;
+          padding: 0.75rem 2.5rem;
+          background-color: $dark;
+          border: unset;
+          color: $light;
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          &:hover {
+            background-color: $dark-text;
+          }
+        }
+      }
+    }
+  }
+}
+div.footer {
+  width: 100%;
+  padding: 50px 100px;
+  background-color: $verydark;
+
+  > div.footerBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $light;
+    font-family: $heading-font;
+    font-size: 18px;
+    font-weight: 500;
+
+    > div {
+      display: flex;
+
+      > p {
+        display: flex;
+        align-items: center;
+
+        > a {
+          text-decoration: underline;
+          color: $primary;
+
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }
