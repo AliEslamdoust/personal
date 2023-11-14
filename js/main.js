@@ -179,10 +179,7 @@ portfolioMainHeight();
 document.getElementById("hireMe").addEventListener("click", function () {
   console.log(containers[containers.length - 1].getBoundingClientRect());
   window.scroll({
-    top:
-      $(containers[containers.length - 1]).offset().top +
-      containers[containers.length - 1].getBoundingClientRect().height +
-      65,
+    top: $(containers[containers.length - 1]).offset().top - 65,
     left: 0,
     behavior: "smooth",
   });
