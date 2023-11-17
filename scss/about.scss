@@ -47,27 +47,6 @@ div.aboutContainer {
       gap: 100px;
       padding-right: 50px;
 
-      > div.aboutText {
-        color: $dark;
-
-        > h2 {
-          font-size: 24px;
-          font-weight: 500;
-          font-family: $heading-font;
-          line-height: 2;
-
-          > strong {
-            font-family: inherit;
-          }
-        }
-
-        > p {
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 2;
-        }
-      }
-
       > div.aboutLogo {
         font-family: $heading-font;
         display: flex;
@@ -102,7 +81,29 @@ div.aboutContainer {
           text-transform: capitalize;
         }
       }
+
+      > div.aboutText {
+        color: $dark;
+
+        > h2 {
+          font-size: 24px;
+          font-weight: 500;
+          font-family: $heading-font;
+          line-height: 2;
+
+          > strong {
+            font-family: inherit;
+          }
+        }
+
+        > p {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 2;
+        }
+      }
     }
+
     > div.aboutItems {
       margin-top: 20px;
       display: flex;
@@ -151,5 +152,71 @@ div.aboutContainer {
     > div {
       width: 50%;
     }
+  }
+}
+
+@media (max-width: 576px) {
+  div.aboutBodyTop {
+    > div.aboutLogo {
+      align-items: flex-start;
+
+      > span {
+        display: block;
+        padding-bottom: 8px;
+        font-size: 70px !important;
+        background: unset !important;
+        width: max-content !important;
+        height: max-content !important;
+
+        &::after {
+          content: "";
+          width: 60%;
+          height: 3px;
+          bottom: 6px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: $lightLogo;
+          position: absolute;
+        }
+        &::before {
+          content: "";
+          width: 100%;
+          height: 3px;
+          bottom: 0;
+          left: 0;
+          background-color: $lightLogo;
+          position: absolute;
+        }
+
+        > i {
+          position: static !important;
+          line-height: 1 !important;
+        }
+      }
+
+      > p {
+        font-size: 22px !important;
+      }
+    }
+  }
+
+  div.aboutItems {
+    > div {
+      width: 100%;
+    }
+  }
+
+  div.aboutText {
+    > H2 {
+      font-size: 20px !important;
+    }
+
+    > p {
+      font-size: 16px !important;
+    }
+  }
+
+  div.aboutItems {
+    font-size: 16px !important;
   }
 }

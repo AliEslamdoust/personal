@@ -57,6 +57,7 @@ div.portfolioContainer {
           border-bottom: 2px solid transparent;
           cursor: pointer;
           padding: 10px 10px;
+          text-align: center;
 
           &:hover {
             border-color: $lightLogo;
@@ -209,5 +210,47 @@ div.portfolioHire {
     > h2 {
       font-size: 32px;
     }
+  }
+}
+
+@media (max-width: 576px) {
+  div.portfolioBodyTop {
+    > ul {
+      > li {
+        padding: 10px 5px !important;
+        white-space: nowrap;
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  div.portfolioBodyBottom {
+    > ul {
+      > li {
+        width: 100% !important;
+        margin: 10px !important;
+      }
+    }
+  }
+
+  div.portfolioHire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--hiremeHeight) !important;
+  }
+
+  div.portfolioHContent {
+    padding: 0 !important;
+
+    > h2 {
+      max-width: 80%;
+      font-size: 24px !important;
+      text-align: center;
+    }
+  }
+
+  .button {
+    font-size: 16px !important;
   }
 }

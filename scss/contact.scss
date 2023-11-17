@@ -215,6 +215,58 @@ div.contactContainer {
       span {
         font-size: 18px !important;
       }
+
+      form {
+        > textarea {
+          resize: none !important;
+        }
+      }
     }
+  }
+}
+
+@media (max-width: 576px) {
+  div.contactBody {
+    align-items: center !important;
+
+    > div.contactBodyLeft {
+      > h2 {
+        font-size: 24px !important;
+      }
+
+      > p {
+        font-size: 16px !important;
+      }
+
+      > div.contactTextContainer {
+        > div {
+          > h3 {
+            font-size: 20px !important;
+          }
+
+          > a,
+          span {
+            font-size: 16px !important;
+          }
+        }
+      }
+    }
+
+    > div.contactBodyRight {
+      > h2 {
+        font-size: 24px !important;
+      }
+
+      > form {
+        > label,
+        input {
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+
+  .button {
+    font-size: 16px !important;
   }
 }

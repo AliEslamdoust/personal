@@ -1,12 +1,14 @@
 // menu Activator
 let menuBtn = document.getElementById("menuBtn");
 
-menuBtn.addEventListener("click", function () {
+menuBtn.addEventListener("click", openCloseMenu);
+
+function openCloseMenu() {
   document.getElementById("menuBar1").classList.toggle("menuBars1");
   document.getElementById("menuBar2").classList.toggle("menuBarsHide");
   document.getElementById("menuBar3").classList.toggle("menuBars2");
   document.getElementById("mainMenu").classList.toggle("mmShow");
-});
+}
 
 // scroll spy
 let containers = document.querySelectorAll(".container");
@@ -217,12 +219,14 @@ function removeActiveFAQ() {
 // slider
 
 // slider fixed height
-let swiperContainer = document.getElementById("swiperContainer");
 let sliderContainer = document.getElementById("sliderContainer");
 
 function resizeSlider() {
   let swiperHeight = sliderContainer.getBoundingClientRect().height;
-  swiperContainer.style.height = swiperHeight + "px";
+  document.documentElement.style.setProperty(
+    `--sliderHeight`,
+    `${swiperHeight + 20}px`
+  );
 }
 resizeSlider();
 
@@ -397,12 +401,60 @@ function addFadeIn() {
 
 addFadeIn();
 
-// set height of menu so it doesn't change in mobiles
-window.addEventListener("resize", resizeMenu);
+// close menu by swiping
+let mainMenu = document.getElementById("mainMenu");
+let movingSituation;
+let menuChange;
+window.addEventListener("resize", moveMenu);
 
-function resizeMenu() {
-  let vh = window.innerHeight;
-  document.documentElement.style.setProperty(`--vh`, `${vh}px`);
+moveMenu();
+
+function moveMenu() {
+  let pageWidth = window.innerWidth;
+  let menuWidth = mainMenu.getBoundingClientRect().width;
+  if (pageWidth <= 768) {
+    mainMenu.addEventListener("touchstart", function (e) {
+      let menuCurrent = e.touches[0].clientX;
+      movingSituation = true;
+
+      this.addEventListener("touchmove", function (event) {
+        if (movingSituation) {
+          menuChange = event.touches[0].clientX - menuCurrent;
+          if (menuChange >= 0) {
+            document.documentElement.style.setProperty(
+              `--menuWidth`,
+              `calc(80% - ${menuChange * 2}px)`
+            );
+          }
+        }
+      });
+
+      this.addEventListener("touchend", closeMenu);
+    });
+  }
 }
 
-resizeMenu();
+function closeMenu() {
+  movingSituation = false;
+  document.documentElement.style.setProperty(`--menuWidth`, `80%`);
+  if (menuChange > 100) {
+    openCloseMenu();
+    menuChange = 0;
+  }
+}
+
+closeMenu();
+
+// change portfolio hireme size
+let hireMeImg = document.getElementById("hireMeImg");
+
+window.addEventListener("resize", resizeHireMe);
+
+resizeHireMe();
+
+function resizeHireMe() {
+  document.documentElement.style.setProperty(
+    `--hiremeHeight`,
+    `${hireMeImg.getBoundingClientRect().height}px`
+  );
+}

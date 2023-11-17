@@ -22,7 +22,8 @@ div.cSContainer {
     padding: 0 15%;
     display: flex;
     position: relative;
-    transition: all 0.25s ease; }
+    transition: all 0.25s ease;
+    height: var(--sliderHeight); }
     div.cSContainer > div.swiperContainer:hover div.sliderControl {
       opacity: 1; }
     div.cSContainer > div.swiperContainer * {
@@ -116,6 +117,26 @@ div.cSContainer {
     padding: 0 5% !important; }
 
   div.sliderControl {
-    width: 90% !important; } }
+    width: 90% !important; }
+
+  div.slider > q {
+    font-size: 18px !important; }
+  div.slider > h4 {
+    font-size: 22px !important; }
+  div.slider > span {
+    font-size: 18px; } }
+@media (max-width: 576px) {
+  div.swiperContainer {
+    padding: 0 !important; }
+
+  div.sliderControl {
+    display: none !important; }
+
+  div.slider > q {
+    font-size: 16px !important; }
+  div.slider > h4 {
+    font-size: 20px !important; }
+  div.slider > span {
+    font-size: 16px; } }
 
 /*# sourceMappingURL=cs.css.map */

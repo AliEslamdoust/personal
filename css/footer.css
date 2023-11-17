@@ -20,6 +20,17 @@ div.footer {
           color: #f5df4e; }
           div.footer > div.footerBody > div > p > a:hover {
             text-decoration: none; }
+        div.footer > div.footerBody > div > p > span {
+          position: relative; }
+          div.footer > div.footerBody > div > p > span::after {
+            content: " | ";
+            font-size: inherit;
+            color: inherit;
+            font-family: Rubik;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
 
 @media (max-width: 992px) {
   div.footerBody {
@@ -27,5 +38,16 @@ div.footer {
     gap: 20px; }
     div.footerBody a {
       text-decoration: none !important; } }
+@media (max-width: 576px) {
+  div.footerBody {
+    font-size: 16px !important; }
+    div.footerBody > div {
+      max-width: 80%; }
+      div.footerBody > div > p {
+        flex-wrap: wrap;
+        justify-content: center; } }
+@media (max-width: 509px) {
+  div.footerBody > div > p > span {
+    display: none; } }
 
 /*# sourceMappingURL=footer.css.map */

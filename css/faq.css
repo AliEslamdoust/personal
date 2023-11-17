@@ -99,5 +99,8 @@ div.faqContainer {
 
   div.faqRight {
     display: none !important; } }
+@media (max-width: 576px) {
+  div.faqHeader > h2 {
+    font-size: 24px !important; } }
 
 /*# sourceMappingURL=faq.css.map */

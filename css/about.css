@@ -24,19 +24,6 @@ div.aboutContainer {
       align-items: flex-start;
       gap: 100px;
       padding-right: 50px; }
-      div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText {
-        color: #212529; }
-        div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText > h2 {
-          font-size: 24px;
-          font-weight: 500;
-          font-family: Poppins;
-          line-height: 2; }
-          div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText > h2 > strong {
-            font-family: inherit; }
-        div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText > p {
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 2; }
       div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutLogo {
         font-family: Poppins;
         display: flex;
@@ -64,6 +51,19 @@ div.aboutContainer {
           text-align: center;
           font-size: 28px;
           text-transform: capitalize; }
+      div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText {
+        color: #212529; }
+        div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText > h2 {
+          font-size: 24px;
+          font-weight: 500;
+          font-family: Poppins;
+          line-height: 2; }
+          div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText > h2 > strong {
+            font-family: inherit; }
+        div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText > p {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 2; }
     div.aboutContainer > div.aboutBody > div.aboutItems {
       margin-top: 20px;
       display: flex;
@@ -96,5 +96,48 @@ div.aboutContainer {
     row-gap: 20px; }
     div.aboutItems > div {
       width: 50%; } }
+@media (max-width: 576px) {
+  div.aboutBodyTop > div.aboutLogo {
+    align-items: flex-start; }
+    div.aboutBodyTop > div.aboutLogo > span {
+      display: block;
+      padding-bottom: 8px;
+      font-size: 70px !important;
+      background: unset !important;
+      width: max-content !important;
+      height: max-content !important; }
+      div.aboutBodyTop > div.aboutLogo > span::after {
+        content: "";
+        width: 60%;
+        height: 3px;
+        bottom: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #deb887;
+        position: absolute; }
+      div.aboutBodyTop > div.aboutLogo > span::before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background-color: #deb887;
+        position: absolute; }
+      div.aboutBodyTop > div.aboutLogo > span > i {
+        position: static !important;
+        line-height: 1 !important; }
+    div.aboutBodyTop > div.aboutLogo > p {
+      font-size: 22px !important; }
+
+  div.aboutItems > div {
+    width: 100%; }
+
+  div.aboutText > H2 {
+    font-size: 20px !important; }
+  div.aboutText > p {
+    font-size: 16px !important; }
+
+  div.aboutItems {
+    font-size: 16px !important; } }
 
 /*# sourceMappingURL=about.css.map */

@@ -137,6 +137,28 @@ div.contactContainer {
         font-size: 32px !important; }
       div.contactBody > div.contactBodyRight a,
       div.contactBody > div.contactBodyRight span {
-        font-size: 18px !important; } }
+        font-size: 18px !important; }
+      div.contactBody > div.contactBodyRight form > textarea {
+        resize: none !important; } }
+@media (max-width: 576px) {
+  div.contactBody {
+    align-items: center !important; }
+    div.contactBody > div.contactBodyLeft > h2 {
+      font-size: 24px !important; }
+    div.contactBody > div.contactBodyLeft > p {
+      font-size: 16px !important; }
+    div.contactBody > div.contactBodyLeft > div.contactTextContainer > div > h3 {
+      font-size: 20px !important; }
+    div.contactBody > div.contactBodyLeft > div.contactTextContainer > div > a,
+    div.contactBody > div.contactBodyLeft > div.contactTextContainer > div span {
+      font-size: 16px !important; }
+    div.contactBody > div.contactBodyRight > h2 {
+      font-size: 24px !important; }
+    div.contactBody > div.contactBodyRight > form > label,
+    div.contactBody > div.contactBodyRight > form input {
+      font-size: 16px !important; }
+
+  .button, div.contactContainer > div.contactBody > div.contactBodyRight > form > button {
+    font-size: 16px !important; } }
 
 /*# sourceMappingURL=contact.css.map */

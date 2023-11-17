@@ -159,3 +159,11 @@ div.faqContainer {
     display: none !important;
   }
 }
+
+@media (max-width: 576px) {
+  div.faqHeader {
+    > h2 {
+      font-size: 24px !important;
+    }
+  }
+}

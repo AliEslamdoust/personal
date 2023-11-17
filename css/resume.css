@@ -106,6 +106,22 @@ div.resumeContainer {
     div.resumeBody > div.resumeBodyTop {
       gap: 30px; }
       div.resumeBody > div.resumeBodyTop > div.rBTItems {
-        width: 100% !important; } }
+        width: 100% !important; }
+
+  .button, div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a {
+    font-size: 16px !important; } }
+@media (max-width: 576px) {
+  div.rBTItems > h3 {
+    font-size: 22px !important; }
+  div.rBTItems > div > h4 {
+    font-size: 20px !important; }
+  div.rBTItems > div > h5,
+  div.rBTItems > div p {
+    font-size: 16px !important; }
+
+  div.skillsBar {
+    justify-content: center !important; }
+    div.skillsBar > div.skillItem {
+      width: 90% !important; } }
 
 /*# sourceMappingURL=resume.css.map */

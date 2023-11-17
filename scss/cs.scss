@@ -46,6 +46,7 @@ div.cSContainer {
     display: flex;
     position: relative;
     transition: all 0.25s ease;
+    height: var(--sliderHeight);
 
     &:hover div.sliderControl {
       opacity: 1;
@@ -171,5 +172,43 @@ div.cSContainer {
 
   div.sliderControl {
     width: 90% !important;
+  }
+
+  div.slider {
+    > q {
+      font-size: 18px !important;
+    }
+
+    > h4 {
+      font-size: 22px !important;
+    }
+
+    > span {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  div.swiperContainer {
+    padding: 0 !important;
+  }
+
+  div.sliderControl {
+    display: none !important;
+  }
+
+  div.slider {
+    > q {
+      font-size: 16px !important;
+    }
+
+    > h4 {
+      font-size: 20px !important;
+    }
+
+    > span {
+      font-size: 16px;
+    }
   }
 }

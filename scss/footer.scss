@@ -45,6 +45,21 @@ div.footer {
             text-decoration: none;
           }
         }
+
+        > span {
+          position: relative;
+
+          &::after {
+            content: " | ";
+            font-size: inherit;
+            color: inherit;
+            font-family: $main-font;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
       }
     }
   }
@@ -57,6 +72,33 @@ div.footer {
 
     a {
       text-decoration: none !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  div.footerBody {
+    font-size: 16px !important;
+
+    > div {
+      max-width: 80%;
+
+      > p {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 509px) {
+  div.footerBody {
+    > div {
+      > p {
+        > span {
+          display: none;
+        }
+      }
     }
   }
 }

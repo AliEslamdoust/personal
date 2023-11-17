@@ -56,5 +56,12 @@ div.widContainer {
 @media (max-width: 768px) {
   div.widItem {
     width: 100% !important; } }
+@media (max-width: 576px) {
+  div.widItem > i {
+    font-size: 50px; }
+  div.widItem > h4 {
+    font-size: 22px; }
+  div.widItem > p {
+    font-size: 16px; } }
 
 /*# sourceMappingURL=wid.css.map */
