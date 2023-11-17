@@ -1,0 +1,161 @@
+$main-font: Rubik;
+$heading-font: Poppins;
+$light: #dee3e4;
+$darklight: #c8cdce;
+$dark: #212529;
+$verydark: #111418;
+$dark-text: #4c4d4d;
+$light-text: #6c757d;
+$primary: #f5df4e;
+$aboutBg: #f0f0f0;
+$lightBg: #d8d8d8;
+$widBg: #f8f9fa;
+$lightLogo: #deb887;
+$progressbg: #e9ecef;
+$white: #fff;
+$graybg: #939597;
+$iconLightBg: #fafafa;
+
+// button links
+.button {
+  padding: 0.75rem 2.25rem;
+  text-decoration: none;
+  color: $dark;
+  background-color: $primary;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+div.faqContainer {
+  width: 100%;
+  padding: 100px;
+  background-color: $widBg;
+
+  > div.faqBody {
+    display: flex;
+    width: 100%;
+
+    > div.faqLeft {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 50%;
+
+      > div.faqHeader {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: $dark;
+
+        > span {
+          padding: 4px 8px;
+          background-color: $primary;
+          width: max-content;
+          text-transform: uppercase;
+        }
+
+        > h2 {
+          font-size: 32px;
+          font-family: $heading-font;
+        }
+      }
+
+      > div.faqMore {
+        width: 100%;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+
+        > div.faqItem {
+          user-select: none;
+          width: 100%;
+          padding: 20px 0 20px 10px;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          transition: all 0.15s ease;
+          color: $light-text;
+          cursor: pointer;
+
+          &:nth-last-child(1) {
+            &::after {
+              display: none;
+            }
+          }
+
+          &.faqActive {
+            color: $dark;
+
+            span {
+              transform: rotate(180deg);
+            }
+
+            p {
+              margin-top: 10px;
+              height: auto;
+            }
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 80%;
+            left: 40px;
+            height: 1px;
+            background-color: $light-text;
+          }
+
+          > div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: inherit;
+            transition: inherit;
+
+            > span {
+              transition: inherit;
+              font-size: 16px;
+            }
+
+            > h3 {
+              transition: inherit;
+              font-size: 18px;
+              font-family: $heading-font;
+            }
+          }
+
+          > p {
+            transition: all 0.15s linear;
+            padding: 0 30px;
+            color: $dark;
+            font-weight: 500;
+            overflow: hidden;
+            height: 0;
+          }
+        }
+      }
+    }
+
+    > div.faqRight {
+      width: 50%;
+      align-self: stretch;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      transition: all 0.15s ease;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  div.faqLeft {
+    width: 100% !important;
+  }
+
+  div.faqRight {
+    display: none !important;
+  }
+}

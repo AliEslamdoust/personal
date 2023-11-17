@@ -1,0 +1,142 @@
+.button, div.contactContainer > div.contactBody > div.contactBodyRight > form > button {
+  padding: 0.75rem 2.25rem;
+  text-decoration: none;
+  color: #212529;
+  background-color: #f5df4e;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer; }
+
+div.contactContainer {
+  width: 100%;
+  padding: 100px;
+  background-color: #f5df4e;
+  color: #212529; }
+  div.contactContainer > div.contactBody {
+    width: 100%;
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between; }
+    div.contactContainer > div.contactBody > div.contactBodyLeft {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px; }
+      div.contactContainer > div.contactBody > div.contactBodyLeft > h2 {
+        font-size: 40px;
+        font-family: Poppins; }
+      div.contactContainer > div.contactBody > div.contactBodyLeft > p {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.6; }
+      div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; }
+        div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer > div {
+          display: flex;
+          flex-direction: column;
+          gap: 5px; }
+          div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer > div > h3 {
+            font-size: 24px;
+            font-family: Poppins; }
+          div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer > div > a,
+          div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer > div span {
+            font-size: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            color: #212529;
+            display: inline-block;
+            width: max-content; }
+      div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactIcons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px; }
+        div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactIcons > a {
+          display: block;
+          text-decoration: none;
+          color: #212529;
+          font-size: 24px;
+          transition: all 0.25s ease; }
+          div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactIcons > a:hover {
+            filter: drop-shadow(0 0 1px #212529);
+            color: #f5df4e; }
+    div.contactContainer > div.contactBody > div.contactBodyRight {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: #212529; }
+      div.contactContainer > div.contactBody > div.contactBodyRight > h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+        font-family: Poppins; }
+      div.contactContainer > div.contactBody > div.contactBodyRight > form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; }
+        div.contactContainer > div.contactBody > div.contactBodyRight > form > label {
+          font-size: 20px;
+          font-weight: 700;
+          margin-top: 10px; }
+        div.contactContainer > div.contactBody > div.contactBodyRight > form > input {
+          all: unset;
+          padding: 0.5rem 1rem;
+          box-sizing: border-box;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+          font-size: 18px;
+          font-family: Poppins;
+          transition: all 0.25s ease; }
+        div.contactContainer > div.contactBody > div.contactBodyRight > form > textarea {
+          box-sizing: border-box;
+          background-color: unset;
+          border: unset;
+          outline: unset;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+          resize: vertical;
+          margin-bottom: 10px;
+          font-size: 18px;
+          font-family: Poppins;
+          transition: all 0.25s ease; }
+        div.contactContainer > div.contactBody > div.contactBodyRight > form > input:focus,
+        div.contactContainer > div.contactBody > div.contactBodyRight > form textarea:focus {
+          border-bottom: 1px solid #212529; }
+        div.contactContainer > div.contactBody > div.contactBodyRight > form > input:valid,
+        div.contactContainer > div.contactBody > div.contactBodyRight > form textarea:valid {
+          border-bottom: 1px solid #239e23; }
+        div.contactContainer > div.contactBody > div.contactBodyRight > form > button {
+          width: max-content;
+          padding: 0.75rem 2.5rem;
+          background-color: #212529;
+          border: unset;
+          color: #dee3e4;
+          display: flex;
+          gap: 10px;
+          align-items: center; }
+          div.contactContainer > div.contactBody > div.contactBodyRight > form > button:hover {
+            background-color: #4c4d4d; }
+
+@media (max-width: 992px) {
+  div.contactBody {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; }
+    div.contactBody > div.contactBodyLeft {
+      width: 90% !important;
+      gap: 20px !important; }
+      div.contactBody > div.contactBodyLeft > h2 {
+        font-size: 32px !important; }
+    div.contactBody div.contactTextContainer h3 {
+      font-size: 20px !important; }
+    div.contactBody > div.contactBodyRight {
+      width: 90% !important;
+      gap: 10px !important; }
+      div.contactBody > div.contactBodyRight > h2 {
+        font-size: 32px !important; }
+      div.contactBody > div.contactBodyRight a,
+      div.contactBody > div.contactBodyRight span {
+        font-size: 18px !important; } }
+
+/*# sourceMappingURL=contact.css.map */

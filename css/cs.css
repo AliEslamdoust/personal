@@ -1,0 +1,121 @@
+.button {
+  padding: 0.75rem 2.25rem;
+  text-decoration: none;
+  color: #212529;
+  background-color: #f5df4e;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer; }
+
+div.cSContainer {
+  background-color: #939597;
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  div.cSContainer h2 {
+    color: #f8f9fa !important; }
+  div.cSContainer > div.swiperContainer {
+    margin-top: 50px;
+    width: 100%;
+    padding: 0 15%;
+    display: flex;
+    position: relative;
+    transition: all 0.25s ease; }
+    div.cSContainer > div.swiperContainer:hover div.sliderControl {
+      opacity: 1; }
+    div.cSContainer > div.swiperContainer * {
+      transition: inherit; }
+    div.cSContainer > div.swiperContainer > div.sliderContainer {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden; }
+      div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        width: 100%; }
+        div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider {
+          width: 100%;
+          min-width: 100%;
+          padding: 2rem;
+          gap: 1rem;
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 100%;
+          align-items: center;
+          user-select: none; }
+          div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider > q {
+            letter-spacing: 1px;
+            line-height: 1.6;
+            font-size: 20px;
+            color: #f8f9fa;
+            font-weight: 600;
+            text-align: center; }
+          div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider > img {
+            width: 65px;
+            border-radius: 50%;
+            user-select: none; }
+          div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider > h4 {
+            font-weight: 500;
+            font-family: Poppins;
+            font-size: 24px;
+            color: #fff; }
+          div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider > span {
+            margin-top: -0.5rem;
+            color: #f8f9fa;
+            font-family: Poppins;
+            font-size: 18px; }
+    div.cSContainer > div.swiperContainer > div.sliderControl {
+      width: 70%;
+      height: 40px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      opacity: 0; }
+      div.cSContainer > div.swiperContainer > div.sliderControl > div {
+        background-color: #fafafa;
+        width: 40px;
+        height: inherit;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+    div.cSContainer > div.swiperContainer > div.pagination {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 50%); }
+      div.cSContainer > div.swiperContainer > div.pagination > span {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: #f8f9fa;
+        cursor: pointer; }
+        div.cSContainer > div.swiperContainer > div.pagination > span.activePg {
+          background-color: #f5df4e !important;
+          width: 20px !important; }
+
+@media (max-width: 992px) {
+  div.swiperContainer {
+    padding: 0 5% !important; }
+
+  div.sliderControl {
+    width: 90% !important; } }
+
+/*# sourceMappingURL=cs.css.map */

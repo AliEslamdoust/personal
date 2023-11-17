@@ -1,0 +1,96 @@
+$main-font: Rubik;
+$heading-font: Poppins;
+$light: #dee3e4;
+$darklight: #c8cdce;
+$dark: #212529;
+$verydark: #111418;
+$dark-text: #4c4d4d;
+$light-text: #6c757d;
+$primary: #f5df4e;
+$aboutBg: #f0f0f0;
+$lightBg: #d8d8d8;
+$widBg: #f8f9fa;
+$lightLogo: #deb887;
+$progressbg: #e9ecef;
+$white: #fff;
+$graybg: #939597;
+$iconLightBg: #fafafa;
+
+// button links
+.button {
+  padding: 0.75rem 2.25rem;
+  text-decoration: none;
+  color: $dark;
+  background-color: $primary;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+div.widContainer {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $aboutBg;
+  gap: 100px;
+
+  > div.widBody {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: stretch;
+
+    > div.widItem {
+      width: calc(33.33% - 10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 50px 30px;
+      border: 1px solid $light-text;
+      border-radius: 5px;
+      color: $dark;
+      transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+
+      &:hover {
+        transform: scale(0.98);
+        background-color: $lightBg;
+      }
+
+      > i {
+        font-style: normal;
+        font-size: 60px;
+        color: $lightLogo;
+        margin-bottom: 30px;
+      }
+
+      > h4 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        font-family: $heading-font;
+      }
+
+      > p {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  div.widItem {
+    width: calc(50% - 7.5px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  div.widItem {
+    width: 100% !important;
+  }
+}

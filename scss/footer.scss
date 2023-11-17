@@ -1,0 +1,62 @@
+$main-font: Rubik;
+$heading-font: Poppins;
+$light: #dee3e4;
+$darklight: #c8cdce;
+$dark: #212529;
+$verydark: #111418;
+$dark-text: #4c4d4d;
+$light-text: #6c757d;
+$primary: #f5df4e;
+$aboutBg: #f0f0f0;
+$lightBg: #d8d8d8;
+$widBg: #f8f9fa;
+$lightLogo: #deb887;
+$progressbg: #e9ecef;
+$white: #fff;
+$graybg: #939597;
+$iconLightBg: #fafafa;
+
+div.footer {
+  width: 100%;
+  padding: 50px 100px;
+  background-color: $verydark;
+
+  > div.footerBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $light;
+    font-family: $heading-font;
+    font-size: 18px;
+    font-weight: 500;
+
+    > div {
+      display: flex;
+
+      > p {
+        display: flex;
+        align-items: center;
+
+        > a {
+          text-decoration: underline;
+          color: $primary;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  div.footerBody {
+    flex-direction: column;
+    gap: 20px;
+
+    a {
+      text-decoration: none !important;
+    }
+  }
+}

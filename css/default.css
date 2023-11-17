@@ -1,0 +1,36 @@
+@font-face {
+  font-family: Rubik;
+  src: url(../fonts/Rubik-VariableFont_wght.woff); }
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins.woff); }
+@keyframes fadeInTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes fadeInBottom {
+  from {
+    transform: translateY(100px);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+@keyframes fadeInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+
+/*# sourceMappingURL=default.css.map */

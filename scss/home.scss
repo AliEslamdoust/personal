@@ -1,0 +1,325 @@
+$main-font: Rubik;
+$heading-font: Poppins;
+$light: #dee3e4;
+$darklight: #c8cdce;
+$dark: #212529;
+$verydark: #111418;
+$dark-text: #4c4d4d;
+$light-text: #6c757d;
+$primary: #f5df4e;
+$aboutBg: #f0f0f0;
+$lightBg: #d8d8d8;
+$widBg: #f8f9fa;
+$lightLogo: #deb887;
+$progressbg: #e9ecef;
+$white: #fff;
+$graybg: #939597;
+$iconLightBg: #fafafa;
+
+// button links
+.button {
+  padding: 0.75rem 2.25rem;
+  text-decoration: none;
+  color: $dark;
+  background-color: $primary;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+div.introContainer {
+  width: 100%;
+  height: 100vh;
+
+  > div {
+    &.introBg {
+      width: inherit;
+      height: inherit;
+      background: url(../media/intro-bg.jpg) center no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      filter: brightness(0.7);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    &.menuTop {
+      width: 100%;
+      height: 65px;
+      padding: 0 100px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      transition: all 0.25s ease;
+
+      &.menuTopBlur {
+        backdrop-filter: blur(20px);
+        background-color: #0000007c;
+      }
+
+      > nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        > h1 {
+          font-size: 28px;
+          font-weight: 900;
+          color: $light;
+        }
+
+        > div.menuContainer {
+          width: max-content;
+          column-gap: 20px;
+          display: flex;
+          align-items: center;
+          margin-right: 50px;
+
+          > a {
+            color: $light;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+
+            > i {
+              transform: rotatey(180deg);
+            }
+          }
+
+          > div.menuBtn {
+            width: 25px;
+            height: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            position: relative;
+            z-index: 1000;
+
+            > span {
+              width: 100%;
+              height: 2px;
+              background-color: $light;
+              transition: all 0.25s ease;
+
+              &.menuBarsHide {
+                opacity: 0;
+              }
+
+              &.menuBars1 {
+                transform: rotatez(45deg) translateY(-3px);
+                transform-origin: left;
+                opacity: 1 !important;
+              }
+              &.menuBars2 {
+                transform: rotatez(-45deg) translateY(2px);
+                transform-origin: left;
+                opacity: 1 !important;
+              }
+            }
+          }
+
+          > div.mmShow {
+            height: 100vh !important;
+            opacity: 1 !important;
+
+            > ul {
+              animation: fadeInTop 0.5s 0.3s;
+              animation-fill-mode: backwards;
+            }
+          }
+
+          > div.mainMenu {
+            position: fixed;
+            height: 0;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.918);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            opacity: 0;
+
+            > button.pageLanguage {
+              background-color: transparent;
+              font-family: $heading-font;
+              color: $light;
+              position: absolute;
+              left: 100px;
+              border: unset;
+              top: 20px;
+              font-size: 18px;
+              cursor: pointer;
+              transition: all 0.25s ease;
+
+              &:hover {
+                color: $primary;
+              }
+            }
+
+            > ul {
+              list-style: none;
+              font-size: 24px;
+              color: $light;
+              gap: 0.75rem;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              font-weight: 600;
+
+              > li {
+                cursor: pointer;
+                transition: all 0.15s ease;
+                width: 100%;
+                text-align: center;
+
+                > div {
+                  text-decoration: none;
+                  color: $light;
+                  display: block;
+
+                  &.menuActive {
+                    color: $primary !important;
+                  }
+
+                  &:hover {
+                    color: $primary;
+                  }
+                }
+              }
+            }
+            > div.menuContact {
+              display: flex;
+              column-gap: 1.55rem;
+              align-items: center;
+
+              > a {
+                font-size: 28px;
+                color: $light;
+                text-decoration: none;
+                transition: all 0.15s ease;
+
+                &:hover {
+                  color: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.infoBody {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $light;
+      background-color: rgba(10, 19, 27, 0.575);
+      gap: 15px;
+      position: relative;
+
+      > h3 {
+        font-weight: 800;
+        font-size: 32px;
+      }
+
+      > h2 {
+        font-size: 60px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        font-family: $heading-font;
+
+        > p {
+          text-transform: capitalize;
+          font-family: inherit;
+        }
+
+        > span {
+          opacity: 1;
+          font-family: inherit;
+
+          &.hiddenTypePointer {
+            opacity: 0 !important;
+          }
+        }
+      }
+
+      > h4 {
+        font-size: 24px;
+      }
+
+      > a {
+        @extend .button;
+        margin-top: 20px;
+      }
+
+      > span {
+        font-size: 24px;
+        position: absolute;
+        left: calc(50% - 9px);
+        bottom: 10px;
+        transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        animation: fadeInTop 1s infinite ease;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  div.mainMenu {
+    left: unset !important;
+    height: var(--vh) !important;
+    width: 0 !important;
+    right: 0;
+  }
+
+  div.mmShow {
+    width: 90% !important;
+  }
+
+  div.infoBody {
+    > h3 {
+      font-size: 30px !important;
+    }
+
+    > h2 {
+      font-size: 48px !important;
+    }
+
+    > h4 {
+      font-size: 22px !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  a.menuLink {
+    display: none;
+  }
+
+  div.infoBody {
+    > h3 {
+      font-size: 28px !important;
+    }
+    > h2 {
+      font-size: 32px !important;
+    }
+  }
+}

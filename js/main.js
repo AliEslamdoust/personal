@@ -5,7 +5,7 @@ menuBtn.addEventListener("click", function () {
   document.getElementById("menuBar1").classList.toggle("menuBars1");
   document.getElementById("menuBar2").classList.toggle("menuBarsHide");
   document.getElementById("menuBar3").classList.toggle("menuBars2");
-  document.getElementById("mainMenu").classList.toggle("mmHidden");
+  document.getElementById("mainMenu").classList.toggle("mmShow");
 });
 
 // scroll spy
@@ -177,7 +177,6 @@ portfolioMainHeight();
 
 // scroll to hire section
 document.getElementById("hireMe").addEventListener("click", function () {
-  console.log(containers[containers.length - 1].getBoundingClientRect());
   window.scroll({
     top: $(containers[containers.length - 1]).offset().top - 65,
     left: 0,
@@ -220,8 +219,14 @@ function removeActiveFAQ() {
 // slider fixed height
 let swiperContainer = document.getElementById("swiperContainer");
 let sliderContainer = document.getElementById("sliderContainer");
-let swiperHeight = sliderContainer.getBoundingClientRect().height;
-swiperContainer.style.height = swiperHeight + "px";
+
+function resizeSlider() {
+  let swiperHeight = sliderContainer.getBoundingClientRect().height;
+  swiperContainer.style.height = swiperHeight + "px";
+}
+resizeSlider();
+
+window.addEventListener("resize", resizeSlider);
 
 // create pagintation buttons
 let sliders = document.querySelectorAll(".slider");
@@ -230,6 +235,8 @@ for (let i = 1; i <= sliders.length; i++) {
   let span = document.createElement("span");
   paginationContainer.appendChild(span);
 }
+
+// slider moving
 let sliderDelay = 2500;
 let sliderIndex = 0;
 let slidertimeout;
@@ -245,6 +252,7 @@ function moveSlider() {
     sliderIndex++;
     changePagination();
     sliderContainer.className = `slidersContainer translateX-${sliderIndex}`;
+    clearSliderTimout();
     callSliderTimeout();
   } else {
     sliderIndex = -1;
@@ -257,13 +265,9 @@ callSliderTimeout();
 let sliderNext = document.getElementById("sliderNext");
 let sliderPrev = document.getElementById("sliderPrev");
 
-sliderNext.addEventListener("click", () => {
-  slideNext();
-});
+sliderNext.addEventListener("click", slideNext);
 
-sliderPrev.addEventListener("click", () => {
-  slidePrev();
-});
+sliderPrev.addEventListener("click", slidePrev);
 
 function slideNext() {
   clearSliderTimout();
@@ -273,7 +277,6 @@ function slideNext() {
 function slidePrev() {
   if (sliderIndex == 0) {
     sliderIndex = sliders.length - 2;
-    console.log(sliderIndex);
   } else {
     sliderIndex -= 2;
   }
@@ -283,6 +286,7 @@ function slidePrev() {
 
 // pagination
 let paginationBtn = document.querySelectorAll("#pagination>span");
+
 function changePagination() {
   paginationBtn.forEach((elem, index) => {
     elem.classList.remove("activePg");
@@ -290,42 +294,115 @@ function changePagination() {
       elem.classList.add("activePg");
     }
     elem.addEventListener("click", function () {
-      sliderIndex = index - 1;
-      clearSliderTimout();
-      moveSlider();
+      try {
+        sliderIndex = index - 1;
+        clearSliderTimout();
+        moveSlider();
+      } catch (err) {
+        console.error(err);
+      }
     });
   });
 }
+
 changePagination();
 
-// slider using mouse
-
-let sliderWidth = sliderContainer.getBoundingClientRect().width;
-let sliderIsMovingWithMouse = false;
+// move slider using mouse
+let startX;
+let moveX;
+let isMoving;
 sliderContainer.addEventListener("mousedown", function (e) {
-  let sliderStartPosition = e.offsetX;
-  sliderIsMovingWithMouse = true;
-  console.log(e.offsetX);
+  clearSliderTimout();
+  startX = e.clientX;
+  isMoving = true;
 
-  this.addEventListener("mousemove", function (evenet) {
-    if (sliderIsMovingWithMouse) {
-      let sliderMovement = evenet.offsetX - sliderStartPosition;
-      if (Math.abs(sliderMovement) >= sliderWidth / 2) {
-        sliderContainer.style.transform = `translateX(${sliderMovement}px)`;
-        if (sliderMovement < 0) {
-          sliderIsMovingWithMouse = false;
-          slideNext();
-        } else {
-          sliderIsMovingWithMouse = false;
-          slidePrev();
-        }
-      }
+  this.addEventListener("mousemove", function (event) {
+    if (isMoving == true) {
+      clearSliderTimout();
+      moveX = event.clientX - startX;
+      this.style.transform = `translateX(calc(${
+        -sliderIndex * 100
+      }% + ${moveX}px))`;
     }
   });
-});
-sliderContainer.addEventListener("mouseup", clearMovingWithMouse);
 
-function clearMovingWithMouse() {
-  sliderIsMovingWithMouse = false;
+  window.addEventListener("mouseup", stopMoving);
+});
+
+function stopMoving() {
+  isMoving = false;
   sliderContainer.removeAttribute("style");
+  if (Math.abs(moveX) >= 100) {
+    if (moveX > 0) {
+      slidePrev();
+    } else {
+      slideNext();
+    }
+  } else {
+    callSliderTimeout();
+  }
 }
+
+// move slider using touch
+sliderContainer.addEventListener("touchstart", function (e) {
+  clearSliderTimout();
+  startX = e.touches[0].clientX;
+  isMoving = true;
+
+  this.addEventListener("touchmove", function (event) {
+    if (isMoving == true) {
+      clearSliderTimout();
+      moveX = event.touches[0].clientX - startX;
+      this.style.transform = `translateX(calc(${
+        -sliderIndex * 100
+      }% + ${moveX}px))`;
+    }
+  });
+
+  window.addEventListener("touchend", stopMoving);
+});
+
+// scrolling animation on elements (fading in after they are visible in the page)
+
+let pageElements = [];
+let fadeInLeft = document.querySelectorAll(".fadeLeft");
+pageElements.push(fadeInLeft);
+let fadeInRight = document.querySelectorAll(".fadeRight");
+pageElements.push(fadeInRight);
+let fadeInBottom = document.querySelectorAll(".fadeBottom");
+pageElements.push(fadeInBottom);
+
+window.addEventListener("scroll", addFadeIn);
+
+function addFadeIn() {
+  let pageHeight = this.window.innerHeight;
+  pageElements.forEach((elem, index) => {
+    elem.forEach((element) => {
+      if (element.getBoundingClientRect().top <= pageHeight - 100) {
+        switch (index) {
+          case 0:
+            element.classList.add("fadeInLeft");
+            break;
+          case 1:
+            element.classList.add("fadeInRight");
+            break;
+          case 2:
+            element.classList.add("fadeInBottom");
+            break;
+        }
+      }
+    });
+  });
+}
+
+addFadeIn();
+
+// set height of menu so it doesn't change in mobiles
+window.addEventListener("resize", resizeMenu);
+
+function resizeMenu() {
+  let vh = window.innerHeight;
+  document.documentElement.style.setProperty(`--vh`, `${vh}px`);
+}
+
+resizeMenu();

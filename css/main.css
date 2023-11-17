@@ -1,17 +1,14 @@
-@font-face {
-  font-family: Rubik;
-  src: url(../fonts/Rubik-VariableFont_wght.woff); }
-@font-face {
-  font-family: Poppins;
-  src: url(../fonts/Poppins.woff); }
-@keyframes fadeInTop {
-  from {
-    transform: translateY(-100%);
-    opacity: 0; }
-  to {
-    transform: translateY(0);
-    opacity: 1; } }
-.button, div.introContainer > div.infoBody > a, div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a, div.portfolioHire > div.portfolioHContent > button, div.contactContainer > div.contactBody > div.contactBodyRight > form > button {
+@import url(./default.css);
+@import url(./home.css);
+@import url(./about.css);
+@import url(./contact.css);
+@import url(./cs.css);
+@import url(./faq.css);
+@import url(./portfolio.css);
+@import url(./resume.css);
+@import url(./wid.css);
+@import url(./footer.css);
+.button {
   padding: 0.75rem 2.25rem;
   text-decoration: none;
   color: #212529;
@@ -28,256 +25,13 @@
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent; }
 
-div.introContainer {
-  width: 100%;
-  height: 100vh; }
-  div.introContainer > div.introBg {
-    width: inherit;
-    height: inherit;
-    background: url(../media/intro-bg.jpg) center no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    filter: brightness(0.7);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1; }
-  div.introContainer > div.menuTop {
-    width: 100%;
-    height: 65px;
-    padding: 0 100px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    transition: all 0.25s ease; }
-    div.introContainer > div.menuTop.menuTopBlur {
-      backdrop-filter: blur(20px);
-      background-color: #0000007c; }
-    div.introContainer > div.menuTop > nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      height: 100%; }
-      div.introContainer > div.menuTop > nav > h1 {
-        font-size: 28px;
-        font-weight: 900;
-        color: #dee3e4; }
-      div.introContainer > div.menuTop > nav > div.menuContainer {
-        width: max-content;
-        column-gap: 20px;
-        display: flex;
-        align-items: center;
-        margin-right: 50px; }
-        div.introContainer > div.menuTop > nav > div.menuContainer > a {
-          color: #dee3e4;
-          text-decoration: none;
-          font-size: 18px;
-          font-weight: 600; }
-          div.introContainer > div.menuTop > nav > div.menuContainer > a > i {
-            transform: rotatey(180deg); }
-        div.introContainer > div.menuTop > nav > div.menuContainer > div.menuBtn {
-          width: 25px;
-          height: 16px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-direction: column;
-          cursor: pointer;
-          transition: all 0.25s ease;
-          position: relative;
-          z-index: 1000; }
-          div.introContainer > div.menuTop > nav > div.menuContainer > div.menuBtn > span {
-            width: 100%;
-            height: 2px;
-            background-color: #dee3e4;
-            transition: all 0.25s ease; }
-            div.introContainer > div.menuTop > nav > div.menuContainer > div.menuBtn > span.menuBarsHide {
-              opacity: 0; }
-            div.introContainer > div.menuTop > nav > div.menuContainer > div.menuBtn > span.menuBars1 {
-              transform: rotatez(45deg) translateY(-3px);
-              transform-origin: left;
-              opacity: 1 !important; }
-            div.introContainer > div.menuTop > nav > div.menuContainer > div.menuBtn > span.menuBars2 {
-              transform: rotatez(-45deg) translateY(2px);
-              transform-origin: left;
-              opacity: 1 !important; }
-        div.introContainer > div.menuTop > nav > div.menuContainer > div.mmHidden {
-          height: 0 !important;
-          opacity: 0 !important; }
-        div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu {
-          position: fixed;
-          height: 100vh;
-          width: 100%;
-          top: 0;
-          left: 0;
-          background-color: rgba(0, 0, 0, 0.918);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          gap: 50px;
-          overflow: hidden;
-          transition: all 0.3s ease;
-          z-index: 999;
-          opacity: 1; }
-          div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul {
-            list-style: none;
-            font-size: 24px;
-            color: #dee3e4;
-            gap: 0.75rem;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            font-weight: 600; }
-            div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li {
-              cursor: pointer;
-              transition: all 0.15s ease;
-              width: 100%;
-              text-align: center; }
-              div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > div {
-                text-decoration: none;
-                color: #dee3e4;
-                display: block; }
-                div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > div.menuActive {
-                  color: #f5df4e !important; }
-                div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > ul > li > div:hover {
-                  color: #f5df4e; }
-          div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > div.menuContact {
-            display: flex;
-            column-gap: 1.55rem;
-            align-items: center; }
-            div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > div.menuContact > a {
-              font-size: 28px;
-              color: #dee3e4;
-              text-decoration: none;
-              transition: all 0.15s ease; }
-              div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > div.menuContact > a:hover {
-                color: #f5df4e; }
-  div.introContainer > div.infoBody {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #dee3e4;
-    background-color: rgba(10, 19, 27, 0.575);
-    gap: 15px;
-    position: relative; }
-    div.introContainer > div.infoBody > h3 {
-      font-weight: 800;
-      font-size: 32px; }
-    div.introContainer > div.infoBody > h2 {
-      font-size: 60px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      font-family: Poppins; }
-      div.introContainer > div.infoBody > h2 > p {
-        text-transform: capitalize;
-        font-family: inherit; }
-      div.introContainer > div.infoBody > h2 > span {
-        opacity: 1;
-        font-family: inherit; }
-        div.introContainer > div.infoBody > h2 > span.hiddenTypePointer {
-          opacity: 0 !important; }
-    div.introContainer > div.infoBody > h4 {
-      font-size: 24px; }
-    div.introContainer > div.infoBody > a {
-      margin-top: 20px; }
-    div.introContainer > div.infoBody > span {
-      font-size: 24px;
-      position: absolute;
-      left: calc(50% - 9px);
-      bottom: 10px;
-      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-      animation: fadeInTop 1s infinite ease; }
-
-div.aboutContainer {
-  width: 100%;
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 100px;
-  background-color: #f8f9fa; }
-  div.aboutContainer > div.aboutBody {
-    width: 100%;
-    display: flex;
-    flex-direction: column; }
-    div.aboutContainer > div.aboutBody > div.aboutBodyTop {
-      display: flex;
-      align-items: flex-start;
-      gap: 100px;
-      padding-right: 50px; }
-      div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText {
-        color: #212529; }
-        div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText > h2 {
-          font-size: 24px;
-          font-weight: 500;
-          font-family: Poppins;
-          line-height: 2; }
-          div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText > h2 > strong {
-            font-family: inherit; }
-        div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText > p {
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 2; }
-      div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutLogo {
-        font-family: Poppins;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        gap: 20px; }
-        div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutLogo > span {
-          margin: 0 auto;
-          position: relative;
-          font-size: 120px;
-          grid-row: 1;
-          color: #4c4d4d;
-          line-height: 1;
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
-          content: "";
-          background-color: #f5df4e;
-          font-family: inherit; }
-          div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutLogo > span > i {
-            left: -100%;
-            position: absolute;
-            font-style: normal;
-            font-family: inherit; }
-        div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutLogo > p {
-          grid-row: 2;
-          color: #212529;
-          text-align: center;
-          font-size: 28px;
-          text-transform: capitalize; }
-    div.aboutContainer > div.aboutBody > div.aboutItems {
-      margin-top: 20px;
-      display: flex;
-      width: 100%;
-      justify-content: space-between; }
-      div.aboutContainer > div.aboutBody > div.aboutItems > div {
-        font-size: 18px;
-        font-family: Poppins;
-        flex-grow: 1; }
-        div.aboutContainer > div.aboutBody > div.aboutItems > div > h4 {
-          font-weight: 500;
-          color: #6c757d;
-          margin-bottom: 8px; }
-          div.aboutContainer > div.aboutBody > div.aboutItems > div > h4 ~ * {
-            color: #4c4d4d;
-            font-weight: 600; }
-
 div.sectoinHeader {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  gap: 20px; }
+  gap: 20px;
+  text-align: center; }
   div.sectoinHeader > span {
     background-color: #f5df4e;
     color: #212529;
@@ -289,733 +43,197 @@ div.sectoinHeader {
     font-weight: 900;
     font-family: Poppins; }
 
-div.widContainer {
-  width: 100%;
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f0f0f0;
-  gap: 100px; }
-  div.widContainer > div.widBody {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 15px;
-    align-items: stretch; }
-    div.widContainer > div.widBody > div.widItem {
-      width: calc(33.33% - 10px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 50px 30px;
-      border: 1px solid #6c757d;
-      border-radius: 5px;
-      color: #212529;
-      transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1); }
-      div.widContainer > div.widBody > div.widItem:hover {
-        transform: scale(0.98);
-        background-color: #d8d8d8; }
-      div.widContainer > div.widBody > div.widItem > i {
-        font-style: normal;
-        font-size: 60px;
-        color: #deb887;
-        margin-bottom: 30px; }
-      div.widContainer > div.widBody > div.widItem > h4 {
-        font-size: 24px;
-        font-weight: 500;
-        margin-bottom: 20px;
-        font-family: Poppins; }
-      div.widContainer > div.widBody > div.widItem > p {
-        font-size: 18px;
-        line-height: 1.4; }
-
-div.resumeContainer {
-  width: 100%;
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f8f9fa;
-  gap: 100px; }
-  div.resumeContainer > div.resumeBody {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px; }
-    div.resumeContainer > div.resumeBody > div.resumeBodyTop {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap; }
-      div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems {
-        width: 45%;
-        color: #212529; }
-        div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > h3 {
-          font-family: Poppins;
-          font-size: 24px;
-          margin-bottom: 10px; }
-        div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div {
-          border-left: 2px solid #deb887;
-          padding: 20px 0 0 10px; }
-          div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div > h4 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 5px; }
-          div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div > h5 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            line-height: 1.6; }
-          div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div > p {
-            font-size: 18px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #6c757d;
-            line-height: 1.6; }
-    div.resumeContainer > div.resumeBody > div.resumeBodyBottom {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      color: #212529; }
-      div.resumeContainer > div.resumeBody > div.resumeBodyBottom > h3 {
-        font-size: 24px;
-        font-family: Poppins; }
-      div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 15px;
-        font-family: Poppins; }
-        div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem {
-          width: 45%;
-          display: flex;
-          flex-direction: column;
-          gap: 10px; }
-          div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem > div.skillHeader {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 16px; }
-          div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem > div.skillBar {
-            width: 100%;
-            display: flex;
-            border-radius: 999px;
-            height: 8px;
-            background-color: #e9ecef;
-            overflow: hidden; }
-            div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem > div.skillBar > span.skillProgress {
-              width: 75%;
-              background-color: #deb887;
-              background-image: linear-gradient(-45deg, transparent 33%, rgba(255, 255, 255, 0.5) 33%, rgba(255, 255, 255, 0.5) 66%, transparent 66%, transparent 100%);
-              background-size: 16px; }
-      div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a {
-        background-color: transparent;
-        border: 1px solid #212529;
-        width: max-content;
-        margin: 30px auto 0 auto;
-        transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1); }
-        div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a:hover {
-          color: #dee3e4;
-          background-color: #212529; }
-
-div.portfolioContainer {
-  width: 100%;
-  padding: 100px;
-  gap: 100px;
-  display: flex;
-  flex-direction: column;
-  background-color: #f0f0f0; }
-  div.portfolioContainer > div.portfolioBody {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop {
-      width: 100%;
-      gap: 50px; }
-      div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul {
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        list-style: none;
-        font-weight: 600; }
-        div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul > li {
-          color: #4c4d4d;
-          border-bottom: 2px solid transparent;
-          cursor: pointer;
-          padding: 10px 10px; }
-          div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul > li:hover {
-            border-color: #f5df4e; }
-          div.portfolioContainer > div.portfolioBody > div.portfolioBodyTop > ul > li.portActive {
-            color: #212529;
-            border-color: #f5df4e; }
-    div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom {
-      width: 100%;
-      margin-top: 30px; }
-      div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%; }
-        div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li {
-          display: flex;
-          position: relative;
-          width: calc(33.33% - 30px);
-          overflow: hidden;
-          cursor: pointer;
-          text-align: center;
-          transition: all 0.15s ease;
-          margin: 15px; }
-          div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li.portfolioHide {
-            opacity: 0 !important;
-            transform: scale(0) !important;
-            width: 0 !important;
-            margin: 0 !important; }
-          div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li:hover img {
-            filter: blur(2px);
-            transform: scale(1.2); }
-          div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li:hover div.porfolioItemAbsolute {
-            opacity: 1; }
-          div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li > img {
-            width: 100%;
-            transition: all 0.25s ease;
-            aspect-ratio: 1/1; }
-          div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li > div.porfolioItemAbsolute {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.6);
-            opacity: 0;
-            transition: all 0.25s ease; }
-            div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li > div.porfolioItemAbsolute > i {
-              font-style: normal;
-              font-size: 40px;
-              color: #deb887; }
-            div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li > div.porfolioItemAbsolute > h3 {
-              margin-top: 15px;
-              font-family: Poppins;
-              font-size: 22px;
-              color: #fff;
-              font-weight: 500;
-              line-height: 1; }
-            div.portfolioContainer > div.portfolioBody > div.portfolioBodyBottom > ul > li > div.porfolioItemAbsolute > h4 {
-              margin-top: 5px;
-              line-height: 1;
-              font-family: Poppins;
-              font-weight: 500;
-              font-size: 18px;
-              color: #dee3e4; }
-
-div.portfolioHire {
-  width: 100%;
-  position: relative;
-  overflow: hidden; }
-  div.portfolioHire > img {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    filter: brightness(0.5); }
-  div.portfolioHire > div.portfolioHContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 150px 100px; }
-    div.portfolioHire > div.portfolioHContent > h2 {
-      font-size: 40px;
-      font-family: Poppins;
-      color: #dee3e4; }
-    div.portfolioHire > div.portfolioHContent > button {
-      border: unset;
-      transition: all 0.15s ease; }
-      div.portfolioHire > div.portfolioHContent > button:hover {
-        background-color: #b8a52f; }
-
-div.faqContainer {
-  width: 100%;
-  padding: 100px;
-  background-color: #f8f9fa; }
-  div.faqContainer > div.faqBody {
-    display: flex;
-    width: 100%; }
-    div.faqContainer > div.faqBody > div.faqLeft {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      width: 50%; }
-      div.faqContainer > div.faqBody > div.faqLeft > div.faqHeader {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        color: #212529; }
-        div.faqContainer > div.faqBody > div.faqLeft > div.faqHeader > span {
-          padding: 4px 8px;
-          background-color: #f5df4e;
-          width: max-content;
-          text-transform: uppercase; }
-        div.faqContainer > div.faqBody > div.faqLeft > div.faqHeader > h2 {
-          font-size: 32px;
-          font-family: Poppins; }
-      div.faqContainer > div.faqBody > div.faqLeft > div.faqMore {
-        width: 100%;
-        padding: 10px 20px;
-        display: flex;
-        flex-direction: column; }
-        div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem {
-          user-select: none;
-          width: 100%;
-          padding: 20px 0 20px 10px;
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          transition: all 0.15s ease;
-          color: #6c757d;
-          cursor: pointer; }
-          div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem:nth-last-child(1)::after {
-            display: none; }
-          div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem.faqActive {
-            color: #212529; }
-            div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem.faqActive span {
-              transform: rotate(180deg); }
-            div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem.faqActive p {
-              margin-top: 10px;
-              height: max-content; }
-          div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            width: 80%;
-            left: 40px;
-            height: 1px;
-            background-color: #6c757d; }
-          div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem > div {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: inherit;
-            transition: inherit; }
-            div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem > div > span {
-              transition: inherit;
-              font-size: 16px; }
-            div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem > div > h3 {
-              transition: inherit;
-              font-size: 18px;
-              font-family: Poppins; }
-          div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem > p {
-            transition: all 0.15s linear;
-            padding: 0 30px;
-            color: #212529;
-            font-weight: 500;
-            overflow: hidden;
-            height: 0; }
-    div.faqContainer > div.faqBody > div.faqRight {
-      width: 50%;
-      align-self: stretch;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      transition: all 0.15s ease; }
-
-div.cSContainer {
-  background-color: #939597;
-  width: 100%;
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  div.cSContainer h2 {
-    color: #f8f9fa !important; }
-  div.cSContainer > div.swiperContainer {
-    margin-top: 50px;
-    width: 70%;
-    display: flex;
-    position: relative;
-    transition: all 0.25s ease; }
-    div.cSContainer > div.swiperContainer:hover div.sliderControl {
-      opacity: 1; }
-    div.cSContainer > div.swiperContainer * {
-      transition: inherit; }
-    div.cSContainer > div.swiperContainer > div.sliderContainer {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      overflow: hidden; }
-      div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: max-content;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: stretch;
-        width: 100%; }
-        div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider {
-          width: 100%;
-          min-width: 100%;
-          padding: 2rem;
-          gap: 1rem;
-          display: flex;
-          flex-direction: column;
-          flex: 1 1 100%;
-          align-items: center;
-          user-select: none; }
-          div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider > q {
-            letter-spacing: 1px;
-            line-height: 1.6;
-            font-size: 20px;
-            color: #f8f9fa;
-            font-weight: 600;
-            text-align: center; }
-          div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider > img {
-            width: 65px;
-            border-radius: 50%; }
-          div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider > h4 {
-            font-weight: 500;
-            font-family: Poppins;
-            font-size: 24px;
-            color: #fff; }
-          div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider > span {
-            margin-top: -0.5rem;
-            color: #f8f9fa;
-            font-family: Poppins;
-            font-size: 18px; }
-    div.cSContainer > div.swiperContainer > div.sliderControl {
-      width: 100%;
-      height: 40px;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translatey(-50%);
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row-reverse;
-      opacity: 0; }
-      div.cSContainer > div.swiperContainer > div.sliderControl > div {
-        background-color: #fafafa;
-        width: 40px;
-        height: inherit;
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-    div.cSContainer > div.swiperContainer > div.pagination {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, 50%); }
-      div.cSContainer > div.swiperContainer > div.pagination > span {
-        width: 10px;
-        height: 10px;
-        border-radius: 999px;
-        background: #f8f9fa;
-        cursor: pointer; }
-        div.cSContainer > div.swiperContainer > div.pagination > span.activePg {
-          background-color: #f5df4e !important;
-          width: 20px !important; }
-
 .translateX-0 {
-  transform: translateX(calc(-0* 100%)) !important; }
+  transform: translateX(calc(-0* 100%)); }
 
 .translateX-1 {
-  transform: translateX(calc(-1* 100%)) !important; }
+  transform: translateX(calc(-1* 100%)); }
 
 .translateX-2 {
-  transform: translateX(calc(-2* 100%)) !important; }
+  transform: translateX(calc(-2* 100%)); }
 
 .translateX-3 {
-  transform: translateX(calc(-3* 100%)) !important; }
+  transform: translateX(calc(-3* 100%)); }
 
 .translateX-4 {
-  transform: translateX(calc(-4* 100%)) !important; }
+  transform: translateX(calc(-4* 100%)); }
 
 .translateX-5 {
-  transform: translateX(calc(-5* 100%)) !important; }
+  transform: translateX(calc(-5* 100%)); }
 
 .translateX-6 {
-  transform: translateX(calc(-6* 100%)) !important; }
+  transform: translateX(calc(-6* 100%)); }
 
 .translateX-7 {
-  transform: translateX(calc(-7* 100%)) !important; }
+  transform: translateX(calc(-7* 100%)); }
 
 .translateX-8 {
-  transform: translateX(calc(-8* 100%)) !important; }
+  transform: translateX(calc(-8* 100%)); }
 
 .translateX-9 {
-  transform: translateX(calc(-9* 100%)) !important; }
+  transform: translateX(calc(-9* 100%)); }
 
 .translateX-10 {
-  transform: translateX(calc(-10* 100%)) !important; }
+  transform: translateX(calc(-10* 100%)); }
 
 .translateX-11 {
-  transform: translateX(calc(-11* 100%)) !important; }
+  transform: translateX(calc(-11* 100%)); }
 
 .translateX-12 {
-  transform: translateX(calc(-12* 100%)) !important; }
+  transform: translateX(calc(-12* 100%)); }
 
 .translateX-13 {
-  transform: translateX(calc(-13* 100%)) !important; }
+  transform: translateX(calc(-13* 100%)); }
 
 .translateX-14 {
-  transform: translateX(calc(-14* 100%)) !important; }
+  transform: translateX(calc(-14* 100%)); }
 
 .translateX-15 {
-  transform: translateX(calc(-15* 100%)) !important; }
+  transform: translateX(calc(-15* 100%)); }
 
 .translateX-16 {
-  transform: translateX(calc(-16* 100%)) !important; }
+  transform: translateX(calc(-16* 100%)); }
 
 .translateX-17 {
-  transform: translateX(calc(-17* 100%)) !important; }
+  transform: translateX(calc(-17* 100%)); }
 
 .translateX-18 {
-  transform: translateX(calc(-18* 100%)) !important; }
+  transform: translateX(calc(-18* 100%)); }
 
 .translateX-19 {
-  transform: translateX(calc(-19* 100%)) !important; }
+  transform: translateX(calc(-19* 100%)); }
 
 .translateX-20 {
-  transform: translateX(calc(-20* 100%)) !important; }
+  transform: translateX(calc(-20* 100%)); }
 
 .translateX-21 {
-  transform: translateX(calc(-21* 100%)) !important; }
+  transform: translateX(calc(-21* 100%)); }
 
 .translateX-22 {
-  transform: translateX(calc(-22* 100%)) !important; }
+  transform: translateX(calc(-22* 100%)); }
 
 .translateX-23 {
-  transform: translateX(calc(-23* 100%)) !important; }
+  transform: translateX(calc(-23* 100%)); }
 
 .translateX-24 {
-  transform: translateX(calc(-24* 100%)) !important; }
+  transform: translateX(calc(-24* 100%)); }
 
 .translateX-25 {
-  transform: translateX(calc(-25* 100%)) !important; }
+  transform: translateX(calc(-25* 100%)); }
 
 .translateX-26 {
-  transform: translateX(calc(-26* 100%)) !important; }
+  transform: translateX(calc(-26* 100%)); }
 
 .translateX-27 {
-  transform: translateX(calc(-27* 100%)) !important; }
+  transform: translateX(calc(-27* 100%)); }
 
 .translateX-28 {
-  transform: translateX(calc(-28* 100%)) !important; }
+  transform: translateX(calc(-28* 100%)); }
 
 .translateX-29 {
-  transform: translateX(calc(-29* 100%)) !important; }
+  transform: translateX(calc(-29* 100%)); }
 
 .translateX-30 {
-  transform: translateX(calc(-30* 100%)) !important; }
+  transform: translateX(calc(-30* 100%)); }
 
 .translateX-31 {
-  transform: translateX(calc(-31* 100%)) !important; }
+  transform: translateX(calc(-31* 100%)); }
 
 .translateX-32 {
-  transform: translateX(calc(-32* 100%)) !important; }
+  transform: translateX(calc(-32* 100%)); }
 
 .translateX-33 {
-  transform: translateX(calc(-33* 100%)) !important; }
+  transform: translateX(calc(-33* 100%)); }
 
 .translateX-34 {
-  transform: translateX(calc(-34* 100%)) !important; }
+  transform: translateX(calc(-34* 100%)); }
 
 .translateX-35 {
-  transform: translateX(calc(-35* 100%)) !important; }
+  transform: translateX(calc(-35* 100%)); }
 
 .translateX-36 {
-  transform: translateX(calc(-36* 100%)) !important; }
+  transform: translateX(calc(-36* 100%)); }
 
 .translateX-37 {
-  transform: translateX(calc(-37* 100%)) !important; }
+  transform: translateX(calc(-37* 100%)); }
 
 .translateX-38 {
-  transform: translateX(calc(-38* 100%)) !important; }
+  transform: translateX(calc(-38* 100%)); }
 
 .translateX-39 {
-  transform: translateX(calc(-39* 100%)) !important; }
+  transform: translateX(calc(-39* 100%)); }
 
 .translateX-40 {
-  transform: translateX(calc(-40* 100%)) !important; }
+  transform: translateX(calc(-40* 100%)); }
 
 .translateX-41 {
-  transform: translateX(calc(-41* 100%)) !important; }
+  transform: translateX(calc(-41* 100%)); }
 
 .translateX-42 {
-  transform: translateX(calc(-42* 100%)) !important; }
+  transform: translateX(calc(-42* 100%)); }
 
 .translateX-43 {
-  transform: translateX(calc(-43* 100%)) !important; }
+  transform: translateX(calc(-43* 100%)); }
 
 .translateX-44 {
-  transform: translateX(calc(-44* 100%)) !important; }
+  transform: translateX(calc(-44* 100%)); }
 
 .translateX-45 {
-  transform: translateX(calc(-45* 100%)) !important; }
+  transform: translateX(calc(-45* 100%)); }
 
 .translateX-46 {
-  transform: translateX(calc(-46* 100%)) !important; }
+  transform: translateX(calc(-46* 100%)); }
 
 .translateX-47 {
-  transform: translateX(calc(-47* 100%)) !important; }
+  transform: translateX(calc(-47* 100%)); }
 
 .translateX-48 {
-  transform: translateX(calc(-48* 100%)) !important; }
+  transform: translateX(calc(-48* 100%)); }
 
 .translateX-49 {
-  transform: translateX(calc(-49* 100%)) !important; }
+  transform: translateX(calc(-49* 100%)); }
 
 .translateX-50 {
-  transform: translateX(calc(-50* 100%)) !important; }
+  transform: translateX(calc(-50* 100%)); }
 
-div.contactContainer {
-  width: 100%;
-  padding: 100px;
-  background-color: #f5df4e;
-  color: #212529; }
-  div.contactContainer > div.contactBody {
-    width: 100%;
-    display: flex;
-    align-items: self-start;
-    justify-content: space-between; }
-    div.contactContainer > div.contactBody > div.contactBodyLeft {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      gap: 50px; }
-      div.contactContainer > div.contactBody > div.contactBodyLeft > h2 {
-        font-size: 40px;
-        font-family: Poppins; }
-      div.contactContainer > div.contactBody > div.contactBodyLeft > p {
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.6; }
-      div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 10px; }
-        div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer > div {
-          display: flex;
-          flex-direction: column;
-          gap: 5px; }
-          div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer > div > h3 {
-            font-size: 24px;
-            font-family: Poppins; }
-          div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer > div > a,
-          div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer > div span {
-            font-size: 20px;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 600;
-            color: #212529;
-            display: inline-block;
-            width: max-content; }
-      div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactIcons {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        gap: 20px; }
-        div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactIcons > a {
-          display: block;
-          text-decoration: none;
-          color: #212529;
-          font-size: 24px;
-          transition: all 0.25s ease; }
-          div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactIcons > a:hover {
-            filter: drop-shadow(0 0 1px #212529);
-            color: #f5df4e; }
-    div.contactContainer > div.contactBody > div.contactBodyRight {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      color: #212529; }
-      div.contactContainer > div.contactBody > div.contactBodyRight > h2 {
-        font-size: 40px;
-        margin-bottom: 30px;
-        font-family: Poppins; }
-      div.contactContainer > div.contactBody > div.contactBodyRight > form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px; }
-        div.contactContainer > div.contactBody > div.contactBodyRight > form > label {
-          font-size: 20px;
-          font-weight: 700;
-          margin-top: 10px; }
-        div.contactContainer > div.contactBody > div.contactBodyRight > form > input {
-          all: unset;
-          padding: 0.5rem 1rem;
-          box-sizing: border-box;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-          font-size: 18px;
-          font-family: Poppins;
-          transition: all 0.25s ease; }
-        div.contactContainer > div.contactBody > div.contactBodyRight > form > textarea {
-          box-sizing: border-box;
-          background-color: unset;
-          border: unset;
-          outline: unset;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-          resize: vertical;
-          margin-bottom: 10px;
-          font-size: 18px;
-          font-family: Poppins;
-          transition: all 0.25s ease; }
-        div.contactContainer > div.contactBody > div.contactBodyRight > form > input:focus,
-        div.contactContainer > div.contactBody > div.contactBodyRight > form textarea:focus {
-          border-bottom: 1px solid #212529; }
-        div.contactContainer > div.contactBody > div.contactBodyRight > form > input:valid,
-        div.contactContainer > div.contactBody > div.contactBodyRight > form textarea:valid {
-          border-bottom: 1px solid #239e23; }
-        div.contactContainer > div.contactBody > div.contactBodyRight > form > button {
-          width: max-content;
-          padding: 0.75rem 2.5rem;
-          background-color: #212529;
-          border: unset;
-          color: #dee3e4;
-          display: flex;
-          gap: 10px;
-          align-items: center; }
-          div.contactContainer > div.contactBody > div.contactBodyRight > form > button:hover {
-            background-color: #4c4d4d; }
+.fadeInBottom {
+  animation: fadeInBottom 1s;
+  animation-fill-mode: backwards;
+  opacity: 1 !important; }
 
-div.footer {
-  width: 100%;
-  padding: 50px 100px;
-  background-color: #111418; }
-  div.footer > div.footerBody {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #dee3e4;
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: 500; }
-    div.footer > div.footerBody > div {
-      display: flex; }
-      div.footer > div.footerBody > div > p {
-        display: flex;
-        align-items: center; }
-        div.footer > div.footerBody > div > p > a {
-          text-decoration: underline;
-          color: #f5df4e; }
-          div.footer > div.footerBody > div > p > a:hover {
-            text-decoration: none; }
+.fadeInRight {
+  animation: fadeInRight 1s;
+  animation-fill-mode: backwards;
+  opacity: 1 !important; }
+
+.fadeInLeft {
+  animation: fadeInLeft 1s;
+  animation-fill-mode: backwards;
+  opacity: 1 !important; }
+
+.fadeBottom,
+.fadeRight,
+.fadeLeft {
+  opacity: 0; }
+
+@media (max-width: 992px) {
+  div.container, div.footer, div.menuTop {
+    padding-left: 50px !important;
+    padding-right: 50px !important; }
+
+  div.container:nth-child(1) {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+@media (max-width: 768px) {
+  div.container, div.footer, div.menuTop {
+    padding-left: 25px !important;
+    padding-right: 25px !important; }
+
+  div.container:nth-child(1) {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+@media (max-width: 992px) {
+  div.sectoinHeader > h2 {
+    font-size: 32px; } }
 
 /*# sourceMappingURL=main.css.map */

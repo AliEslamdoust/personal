@@ -1,0 +1,111 @@
+.button, div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a {
+  padding: 0.75rem 2.25rem;
+  text-decoration: none;
+  color: #212529;
+  background-color: #f5df4e;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer; }
+
+div.resumeContainer {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  gap: 100px; }
+  div.resumeContainer > div.resumeBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px; }
+    div.resumeContainer > div.resumeBody > div.resumeBodyTop {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems {
+        width: 45%;
+        color: #212529; }
+        div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > h3 {
+          font-family: Poppins;
+          font-size: 24px;
+          margin-bottom: 24px; }
+        div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div {
+          border-left: 2px solid #deb887;
+          padding: 20px 0 0 16px; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div:nth-of-type(1) {
+            padding: 0 0 0 16px !important; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div > h4 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 5px; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div > h5 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.6; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div > p {
+            font-size: 18px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #6c757d;
+            line-height: 1.6; }
+    div.resumeContainer > div.resumeBody > div.resumeBodyBottom {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: #212529; }
+      div.resumeContainer > div.resumeBody > div.resumeBodyBottom > h3 {
+        font-size: 24px;
+        font-family: Poppins; }
+      div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+        font-family: Poppins; }
+        div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem > div.skillHeader {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem > div.skillBar {
+            width: 100%;
+            display: flex;
+            border-radius: 999px;
+            height: 8px;
+            background-color: #e9ecef;
+            overflow: hidden; }
+            div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem > div.skillBar > span.skillProgress {
+              width: 75%;
+              background-color: #deb887;
+              background-image: linear-gradient(-45deg, transparent 33%, rgba(255, 255, 255, 0.5) 33%, rgba(255, 255, 255, 0.5) 66%, transparent 66%, transparent 100%);
+              background-size: 16px; }
+      div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a {
+        background-color: transparent;
+        border: 1px solid #212529;
+        width: max-content;
+        margin: 30px auto 0 auto;
+        transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1); }
+        div.resumeContainer > div.resumeBody > div.resumeBodyBottom > a:hover {
+          color: #dee3e4;
+          background-color: #212529; }
+
+@media (max-width: 768px) {
+  div.resumeBody {
+    gap: 20px !important; }
+    div.resumeBody > div.resumeBodyTop {
+      gap: 30px; }
+      div.resumeBody > div.resumeBodyTop > div.rBTItems {
+        width: 100% !important; } }
+
+/*# sourceMappingURL=resume.css.map */

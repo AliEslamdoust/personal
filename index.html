@@ -6,6 +6,24 @@
     <title>Ali Eslamdoust | Personal Website</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./FontAwesome/css/all.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./media/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./media/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./media/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./media/site.webmanifest" />
   </head>
   <body>
     <div class="introContainer container">
@@ -21,7 +39,8 @@
               <span id="menuBar1"></span><span id="menuBar2"></span
               ><span id="menuBar3"></span>
             </div>
-            <div class="mainMenu mmHidden" id="mainMenu">
+            <div class="mainMenu" id="mainMenu">
+              <button class="pageLanguage">EN / FA</button>
               <ul>
                 <li><div class="menuItem">Home</div></li>
                 <li><div class="menuItem">About Me</div></li>
@@ -54,12 +73,12 @@
       </div>
     </div>
     <div class="aboutContainer container">
-      <div class="sectoinHeader">
+      <div class="sectoinHeader fadeBottom">
         <span>About Me</span>
         <h2>Know Me More</h2>
       </div>
       <div class="aboutBody">
-        <div class="aboutBodyTop">
+        <div class="aboutBodyTop fadeBottom">
           <div class="aboutText">
             <h2>Hi, I'm&nbsp;<strong>Ali Eslamdoust</strong></h2>
             <p>
@@ -76,21 +95,21 @@
           </div>
         </div>
         <div class="aboutItems">
-          <div>
+          <div class="fadeLeft">
             <h4>Name:</h4>
             <p>Ali Eslamdoust</p>
           </div>
-          <div>
+          <div class="fadeLeft">
             <h4>Email:</h4>
             <a href="mailto:alieslamdoust@outlook.com"
               >AliEslamdoust@outlook.com</a
             >
           </div>
-          <div>
+          <div class="fadeRight">
             <h4>Date of Birth:</h4>
             <p>22 September, 1994</p>
           </div>
-          <div>
+          <div class="fadeRight">
             <h4>From:</h4>
             <p>Tehran, Iran</p>
           </div>
@@ -98,11 +117,11 @@
       </div>
     </div>
     <div class="widContainer container">
-      <div class="sectoinHeader">
+      <div class="sectoinHeader fadeBottom">
         <span>What I Do?</span>
         <h2>How I can help your next project</h2>
       </div>
-      <div class="widBody">
+      <div class="widBody fadeBottom">
         <div class="widItem">
           <i class="fa-duotone fa-code"></i>
           <h4>Web Design</h4>
@@ -166,13 +185,13 @@
       </div>
     </div>
     <div class="resumeContainer container">
-      <div class="sectoinHeader">
+      <div class="sectoinHeader fadeBottom">
         <span>Resume</span>
         <h2>A summary of My Resume</h2>
       </div>
       <div class="resumeBody">
         <div class="resumeBodyTop">
-          <div class="rBTItems">
+          <div class="rBTItems fadeLeft">
             <h3>My Education</h3>
             <div>
               <h4>Master in Computer Engineering</h4>
@@ -202,7 +221,7 @@
               </p>
             </div>
           </div>
-          <div class="rBTItems">
+          <div class="rBTItems fadeRight">
             <h3>My Experience</h3>
             <div>
               <h4>Master in Computer Engineering</h4>
@@ -233,7 +252,7 @@
             </div>
           </div>
         </div>
-        <div class="resumeBodyBottom">
+        <div class="resumeBodyBottom fadeBottom">
           <h3>My Skills</h3>
           <div class="skillsBar">
             <div class="skillItem">
@@ -284,11 +303,11 @@
       </div>
     </div>
     <div class="portfolioContainer container">
-      <div class="sectoinHeader">
+      <div class="sectoinHeader fadeBottom">
         <span>Potfolio</span>
         <h2>Some of my most recent projects</h2>
       </div>
-      <div class="portfolioBody">
+      <div class="portfolioBody fadeLeft">
         <div class="portfolioBodyTop">
           <ul>
             <li class="portfolioTopics" portfolioActivator="All">All</li>
@@ -363,14 +382,14 @@
     </div>
     <div class="portfolioHire">
       <img src="./media/intro-bg-2.jpg" alt="" />
-      <div class="portfolioHContent">
+      <div class="portfolioHContent fadeBottom">
         <h2>Interested in working with me?</h2>
         <button id="hireMe">Hire Me!</button>
       </div>
     </div>
     <div class="faqContainer container">
       <div class="faqBody">
-        <div class="faqLeft">
+        <div class="faqLeft fadeLeft">
           <div class="faqHeader">
             <span>faq</span>
             <h2>Have any questions?</h2>
@@ -433,18 +452,18 @@
             </div>
           </div>
         </div>
-        <div class="faqRight">
+        <div class="faqRight fadeRight">
           <img src="./media/faq.png" alt="" />
         </div>
       </div>
     </div>
     <div class="cSContainer container">
-      <div class="sectoinHeader">
+      <div class="sectoinHeader fadeBottom">
         <span>Client Speak</span>
         <h2>What Some of my Clients Say</h2>
       </div>
-      <div class="swiperContainer" id="swiperContainer">
-        <div class="sliderContainer">
+      <div class="swiperContainer fadeBottom" id="swiperContainer">
+        <div class="sliderContainer" id="sliderFather">
           <div class="slidersContainer" id="sliderContainer">
             <div class="slider">
               <q>
@@ -505,7 +524,7 @@
     </div>
     <div class="contactContainer container">
       <div class="contactBody">
-        <div class="contactBodyLeft">
+        <div class="contactBodyLeft fadeLeft">
           <h2>Let's get in touch</h2>
           <p>
             I enjoy discussing new projects and design challenges. Please share
@@ -529,7 +548,7 @@
             <a href="" class="fab fa-telegram"></a>
           </div>
         </div>
-        <div class="contactBodyRight">
+        <div class="contactBodyRight fadeRight">
           <h2>Estimate your Project?</h2>
           <form>
             <label>What is your name:</label>
