@@ -554,7 +554,7 @@ function textsLanguage() {
     });
   };
 
-  xhttp.open("GET", `../ln/${language}.json`);
+  xhttp.open("GET", `../personal/ln/${language}.json`);
   xhttp.send();
 }
 
