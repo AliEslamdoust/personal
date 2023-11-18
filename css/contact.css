@@ -18,13 +18,13 @@ div.contactContainer {
     align-items: self-start;
     justify-content: space-between; }
     div.contactContainer > div.contactBody > div.contactBodyLeft {
-      width: 50%;
+      width: 48%;
       display: flex;
       flex-direction: column;
       gap: 50px; }
       div.contactContainer > div.contactBody > div.contactBodyLeft > h2 {
         font-size: 40px;
-        font-family: Poppins; }
+        font-family: Poppins, Rubik; }
       div.contactContainer > div.contactBody > div.contactBodyLeft > p {
         font-size: 20px;
         font-weight: 600;
@@ -39,7 +39,7 @@ div.contactContainer {
           gap: 5px; }
           div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer > div > h3 {
             font-size: 24px;
-            font-family: Poppins; }
+            font-family: Poppins, Rubik; }
           div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer > div > a,
           div.contactContainer > div.contactBody > div.contactBodyLeft > div.contactTextContainer > div span {
             font-size: 20px;
@@ -64,7 +64,7 @@ div.contactContainer {
             filter: drop-shadow(0 0 1px #212529);
             color: #f5df4e; }
     div.contactContainer > div.contactBody > div.contactBodyRight {
-      width: 50%;
+      width: 48%;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -72,7 +72,7 @@ div.contactContainer {
       div.contactContainer > div.contactBody > div.contactBodyRight > h2 {
         font-size: 40px;
         margin-bottom: 30px;
-        font-family: Poppins; }
+        font-family: Poppins, Rubik; }
       div.contactContainer > div.contactBody > div.contactBodyRight > form {
         display: flex;
         flex-direction: column;
@@ -87,7 +87,7 @@ div.contactContainer {
           box-sizing: border-box;
           border-bottom: 1px solid rgba(0, 0, 0, 0.12);
           font-size: 18px;
-          font-family: Poppins;
+          font-family: Poppins, Rubik;
           transition: all 0.25s ease; }
         div.contactContainer > div.contactBody > div.contactBodyRight > form > textarea {
           box-sizing: border-box;
@@ -98,7 +98,7 @@ div.contactContainer {
           resize: vertical;
           margin-bottom: 10px;
           font-size: 18px;
-          font-family: Poppins;
+          font-family: Poppins, Rubik;
           transition: all 0.25s ease; }
         div.contactContainer > div.contactBody > div.contactBodyRight > form > input:focus,
         div.contactContainer > div.contactBody > div.contactBodyRight > form textarea:focus {

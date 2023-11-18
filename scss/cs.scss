@@ -1,5 +1,5 @@
 $main-font: Rubik;
-$heading-font: Poppins;
+$heading-font: Poppins, Rubik;
 $light: #dee3e4;
 $darklight: #c8cdce;
 $dark: #212529;
@@ -34,6 +34,7 @@ div.cSContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  direction: ltr;
 
   h2 {
     color: $widBg !important;
@@ -72,6 +73,7 @@ div.cSContainer {
         flex-wrap: nowrap;
         align-items: stretch;
         width: 100%;
+        transform: translateX(var(--sliderMovement));
 
         > div.slider {
           width: 100%;

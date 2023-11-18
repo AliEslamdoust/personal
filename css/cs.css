@@ -13,7 +13,8 @@ div.cSContainer {
   padding: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  direction: ltr; }
   div.cSContainer h2 {
     color: #f8f9fa !important; }
   div.cSContainer > div.swiperContainer {
@@ -42,7 +43,8 @@ div.cSContainer {
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: stretch;
-        width: 100%; }
+        width: 100%;
+        transform: translateX(var(--sliderMovement)); }
         div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider {
           width: 100%;
           min-width: 100%;
@@ -66,13 +68,13 @@ div.cSContainer {
             user-select: none; }
           div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider > h4 {
             font-weight: 500;
-            font-family: Poppins;
+            font-family: Poppins, Rubik;
             font-size: 24px;
             color: #fff; }
           div.cSContainer > div.swiperContainer > div.sliderContainer > div.slidersContainer > div.slider > span {
             margin-top: -0.5rem;
             color: #f8f9fa;
-            font-family: Poppins;
+            font-family: Poppins, Rubik;
             font-size: 18px; }
     div.cSContainer > div.swiperContainer > div.sliderControl {
       width: 70%;

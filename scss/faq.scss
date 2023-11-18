@@ -1,5 +1,5 @@
 $main-font: Rubik;
-$heading-font: Poppins;
+$heading-font: Poppins, Rubik;
 $light: #dee3e4;
 $darklight: #c8cdce;
 $dark: #212529;
@@ -106,6 +106,13 @@ div.faqContainer {
             left: 40px;
             height: 1px;
             background-color: $light-text;
+          }
+
+          &.rtl {
+            &::after {
+              left: unset;
+              right: 40px;
+            }
           }
 
           > div {

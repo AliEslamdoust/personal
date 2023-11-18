@@ -1,0 +1,154 @@
+{
+  "logo": "Ali Eslamdoust",
+  "menuBtn": [
+    "Home",
+    "About Me",
+    "What I Do",
+    "Resume",
+    "Portfolio",
+    "FAQ",
+    "Client Speak",
+    "Contact Me"
+  ],
+  "infoHead": "Hi, I'm",
+  "infoLive": "based in Tehran, Iran.",
+  "infoLink": "View My Works",
+  "aboutHead": "About Me",
+  "aboutHead1": "Know Me More",
+  "aboutBodyHead": "Hi, I'm&nbsp;<strong>Ali Eslamdoust</strong>",
+  "aboutBodyText": "a designer & developer with a passion for web design. I enjoy developing simple, clean and slick websites that provide real value to the end user. Many clients have procured exceptional results while working with me. Delivering work within time and budget which meets client’s requirements is our moto.",
+  "aboutCompleted": "<strong>completed</strong>&nbsp;Projects",
+  "aboutName": "Name:",
+  "aboutName1": "Ali Eslamdoust",
+  "aboutMail": "Email:",
+  "aboutMail1": "AliEslamdoust@outlook.com",
+  "aboutBirth": "Date of Birth:",
+  "aboutBirth1": "28 January, 2005",
+  "aboutLive": "From:",
+  "aboutLive1": "Tehran, Iran",
+  "widHead": "What I Do?",
+  "widHead1": "How I can help in your next project",
+  "widBodyHead": [
+    "Web Design",
+    "Graphic Design",
+    "Business Analysis",
+    "UI/UX Design",
+    "App Design & Develop",
+    "SEO Marketing"
+  ],
+  "widBodyText": [
+    "As a skilled Web Designer, I craft visually appealing and user-friendly websites that captivate and engage visitors. My expertise in UI/UX principles ensures seamless user experiences.",
+    "My graphic design skills encompass striking visuals and digital artwork, aligning design aesthetics with brand essence and functionality.",
+    "My ability to identify areas of improvement and leverage technology for business growth makes me a valuable asset to any organization. I can effectively bridge the gap between IT capabilities and business objectives. ",
+    "As a UI/UX designer, I craft user-centric interfaces that seamlessly blend functionality with aesthetics, resulting in engaging and intuitive experiences that drive product success.",
+    "Leveraging my design and coding expertise, I provide comprehensive app design and development services, seamlessly crafting user-centric apps that are both aesthetically pleasing and functionally exceptional.",
+    "Equipped with SEO expertise, I enhance website visibility and organic traffic through keyword optimization, link-building, and result-driven strategies, ensuring measurable SEO success."
+  ],
+  "resumeHead": "Resume",
+  "resumeHead1": "A summary of My Resume",
+  "resumeBodyHead": "My Education",
+  "resumeBodyHead1": "My Experience",
+  "resumeSkillHead": "My Skills",
+  "resumeLink": "Download CV",
+  "portfolioHead": "Potfolio",
+  "portfolioHead1": "Some of my most recent projects",
+  "portfolioFilter0": "All",
+  "portfolioFilter1": "Detailed Projects",
+  "portfolioFilter2": "Designs",
+  "portfolioFilter3": "Mockups",
+  "hireMeHead": "Interested in working with me?",
+  "hireMeLink": "Hire Me!",
+  "faqHead": "faq",
+  "faqHead1": "Have any questions?",
+  "csHead": "Client Speak",
+  "csHead1": "What Some of my Clients Say",
+  "contactHead": "Let's get in touch",
+  "contactText": "I enjoy discussing new projects and design challenges. Please share as much info, as possible so we can get the most out of our first catch-up.",
+  "contactLive": "Living in:",
+  "contactLive1": "Tehran",
+  "contactCall": "Call:",
+  "contactCall1": "0919 731 3410",
+  "contactHead1": "Estimate your Project?",
+  "contactName": "What is your name:",
+  "contactEmail": "Your Email Addess",
+  "contactInput": "How can I Help you?:",
+  "contactBtn": "Send",
+  "footer": "Copyright&nbsp;&copy;&nbsp;2023&nbsp;<a href='#'>Ali Eslamdoust</a>&nbsp;<span>&nbsp;</span>&nbsp;All Rights Reserved.",
+  "footer1": "Designed by&nbsp;<a href='#'>Ali Eslamdoust",
+  "educationHead": [
+    "Bachelor in Computer Engineering",
+    "Diploma in Mathematics-Physics",
+    "Personal Websites",
+    "eCommerce",
+    "Portfolio Websites"
+  ],
+  "educationsubhead": [
+    "Tehran-Shomal Azad University",
+    "Sampad High School",
+    "Resume, CV Prorjects",
+    "X Ultra Game Shop",
+    "Human Anatomy"
+  ],
+  "educationText": [
+    "A driven and organized Computer Engineering student at Tehran-Shomal University, I effectively manage my academic studies alongside professional commitments. My strong organizational skills, time management prowess, and unwavering dedication to achieving goals enable me to balance both responsibilities without succumbing to stress or pressure.",
+    "Initially pursuing mathematics and physics at Sampad Schools, I found a stronger passion for client interaction and resilience in the face of challenges. Recognizing my lack of progress in these fields, I shifted my focus to professional endeavors, leveraging my natural ability to connect with clients and my unwavering commitment to project completion.",
+    "I am confident that my skills and experience in personal website development will make me a valuable asset to any team. I am eager to leverage my expertise to create innovative and engaging websites that help people achieve their goals.",
+    "I have a deep understanding of e-commerce best practices and can create websites that are optimized for search engines and conversion rates.",
+    "My dedication to practicing website development extends beyond the realm of personal projects. I am actively involved in open-source contributions and participate in online development communities to stay abreast of the latest trends and technologies. This commitment to continuous learning ensures that my skills remain relevant and up-to-date, allowing me to tackle any web development challenge with confidence."
+  ],
+  "skillTopic": ["Web Design", "HTML", "CSS", "JavaScript", "SASS", "Tailwind"],
+  "progressPercent": ["80", "95", "75", "65", "70", "85"],
+  "portfolioItemsHead": [
+    "Detailed Project",
+    "Design",
+    "Design",
+    "Mockup",
+    "Detailed Project",
+    "Mockup"
+  ],
+  "portfolioItemsText": [
+    "CV Tailwind",
+    "Admin Panel",
+    "Microsoft SASS",
+    "Digikala Website",
+    "Microsoft Calculator",
+    "Apple Website"
+  ],
+  "portfolioItemsImg": [
+    "./media/cv.png",
+    "./media/ap.png",
+    "./media/ms.png",
+    "./media/dk.png",
+    "./media/mc.png",
+    "./media/aw.png"
+  ],
+  "FAQuestion": [
+    "Why trust me?",
+    "Why should you choose me as your front-end developer",
+    "Why should you choose coding over a CMS like WordPress?"
+  ],
+  "FAnswer": [
+    "I am committed to building long-term relationships based on transparency, open communication, and a genuine desire to exceed your expectations. My track record speaks volumes about my dedication to delivering successful projects.",
+    "I bring a blend of technical proficiency, creative vision, and unwavering dedication to crafting exceptional front-end solutions. My expertise spans various technologies, including HTML, CSS, JavaScript, and JavaScript frameworks, ensuring seamless web experiences.",
+    "Coding offers unparalleled flexibility, customization, and performance compared to CMS limitations. You gain control over every aspect of your website, ensuring a tailored user experience that aligns with your unique needs."
+  ],
+  "sliderText": [
+    "Working with you on our website redesign was an absolute pleasure. Your expertise in front-end development was evident from the very beginning, and you were always able to translate our ideas into a stunning and functional reality. We were particularly impressed with your ability to work within our tight deadlines and your willingness to go the extra mile to ensure our satisfaction.",
+    "I was initially hesitant to switch from a CMS to a custom-coded website, but your confidence and expertise quickly put my mind at ease. You explained the benefits of coding in a clear and concise way, and you were always patient with my questions. The result is a website that is not only visually appealing but also incredibly fast and user-friendly. I am so glad I chose you as our front-end developer.",
+    "Your ability to seamlessly blend technical proficiency with creative vision is what sets you apart from other front-end developers. You have a knack for understanding the client's needs and translating them into a web presence that is both elegant and effective. We are consistently amazed by your ability to think outside the box and come up with innovative solutions.",
+    "I have worked with countless front-end developers over the years, but none have come close to your level of professionalism and dedication. You are always responsive to our requests, and you always go above and beyond to ensure that our website is functioning at its best. We are truly grateful to have you as our partner."
+  ],
+  "sliderImg": [
+    "./media/client-sm-1.jpg",
+    "./media/client-sm-2.jpg",
+    "./media/client-sm-3.jpg",
+    "./media/client-sm-4.jpg"
+  ],
+  "sliderName": ["Emily Chen", "Michael Smith", "Patrick Cany", "David Brown"],
+  "sliderAddress": [
+    "Acme Tech Solutions",
+    "Beta Consulting",
+    "Gamma Marketing Solutions",
+    "Delta Software Development"
+  ]
+}

@@ -10,7 +10,7 @@
 @import url(./footer.css);
 
 $main-font: Rubik;
-$heading-font: Poppins;
+$heading-font: Poppins, Rubik;
 $light: #dee3e4;
 $darklight: #c8cdce;
 $dark: #212529;
@@ -75,14 +75,6 @@ div.sectoinHeader {
     font-weight: 900;
     font-family: $heading-font;
   }
-}
-
-$i: 0;
-@while $i<=50 {
-  .translateX-#{$i} {
-    transform: translateX(calc(-#{$i}* 100%));
-  }
-  $i: $i + 1;
 }
 
 .fadeInBottom {

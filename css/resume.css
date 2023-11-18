@@ -25,17 +25,21 @@ div.resumeContainer {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: stretch;
       flex-wrap: wrap; }
       div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems {
         width: 45%;
         color: #212529; }
         div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > h3 {
-          font-family: Poppins;
+          font-family: Poppins, Rubik;
           font-size: 24px;
           margin-bottom: 24px; }
         div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div {
           border-left: 2px solid #deb887;
-          padding: 20px 0 0 16px; }
+          padding: 20px 16px 0 16px; }
+          div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div.rtl {
+            border-left: unset;
+            border-right: 2px solid #deb887; }
           div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div:nth-of-type(1) {
             padding: 0 0 0 16px !important; }
           div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div > h4 {
@@ -59,14 +63,14 @@ div.resumeContainer {
       color: #212529; }
       div.resumeContainer > div.resumeBody > div.resumeBodyBottom > h3 {
         font-size: 24px;
-        font-family: Poppins; }
+        font-family: Poppins, Rubik; }
       div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar {
         width: 100%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 15px;
-        font-family: Poppins; }
+        font-family: Poppins, Rubik; }
         div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem {
           width: 45%;
           display: flex;
@@ -86,7 +90,6 @@ div.resumeContainer {
             background-color: #e9ecef;
             overflow: hidden; }
             div.resumeContainer > div.resumeBody > div.resumeBodyBottom div.skillsBar > div.skillItem > div.skillBar > span.skillProgress {
-              width: 75%;
               background-color: #deb887;
               background-image: linear-gradient(-45deg, transparent 33%, rgba(255, 255, 255, 0.5) 33%, rgba(255, 255, 255, 0.5) 66%, transparent 66%, transparent 100%);
               background-size: 16px; }

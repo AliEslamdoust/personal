@@ -1,5 +1,5 @@
 $main-font: Rubik;
-$heading-font: Poppins;
+$heading-font: Poppins, Rubik;
 $light: #dee3e4;
 $darklight: #c8cdce;
 $dark: #212529;
@@ -54,6 +54,7 @@ div.introContainer {
       left: 0;
       z-index: 999;
       transition: all 0.25s ease;
+      direction: ltr;
 
       &.menuTopBlur {
         backdrop-filter: blur(20px);

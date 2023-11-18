@@ -1,5 +1,5 @@
 $main-font: Rubik;
-$heading-font: Poppins;
+$heading-font: Poppins, Rubik;
 $light: #dee3e4;
 $darklight: #c8cdce;
 $dark: #212529;
@@ -78,6 +78,7 @@ div.portfolioContainer {
       > ul {
         display: flex;
         flex-wrap: wrap;
+        align-items: stretch;
         width: 100%;
 
         > li {
@@ -85,6 +86,7 @@ div.portfolioContainer {
           position: relative;
           width: calc(33.33% - 30px);
           overflow: hidden;
+          border-radius: 5px;
           cursor: pointer;
           text-align: center;
           transition: all 0.15s ease;
@@ -108,8 +110,8 @@ div.portfolioContainer {
 
           > img {
             width: 100%;
+            object-fit: cover;
             transition: all 0.25s ease;
-            aspect-ratio: 1/1;
           }
 
           > div.porfolioItemAbsolute {

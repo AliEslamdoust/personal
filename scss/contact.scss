@@ -1,5 +1,5 @@
 $main-font: Rubik;
-$heading-font: Poppins;
+$heading-font: Poppins, Rubik;
 $light: #dee3e4;
 $darklight: #c8cdce;
 $dark: #212529;
@@ -40,7 +40,7 @@ div.contactContainer {
     justify-content: space-between;
 
     > div.contactBodyLeft {
-      width: 50%;
+      width: 48%;
       display: flex;
       flex-direction: column;
       gap: 50px;
@@ -106,7 +106,7 @@ div.contactContainer {
     }
 
     > div.contactBodyRight {
-      width: 50%;
+      width: 48%;
       display: flex;
       flex-direction: column;
       gap: 20px;

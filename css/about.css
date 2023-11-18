@@ -25,7 +25,7 @@ div.aboutContainer {
       gap: 100px;
       padding-right: 50px; }
       div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutLogo {
-        font-family: Poppins;
+        font-family: Poppins, Rubik;
         display: flex;
         flex-direction: column;
         gap: 20px; }
@@ -56,7 +56,7 @@ div.aboutContainer {
         div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText > h2 {
           font-size: 24px;
           font-weight: 500;
-          font-family: Poppins;
+          font-family: Poppins, Rubik;
           line-height: 2; }
           div.aboutContainer > div.aboutBody > div.aboutBodyTop > div.aboutText > h2 > strong {
             font-family: inherit; }
@@ -71,7 +71,7 @@ div.aboutContainer {
       justify-content: space-between; }
       div.aboutContainer > div.aboutBody > div.aboutItems > div {
         font-size: 18px;
-        font-family: Poppins;
+        font-family: Poppins, Rubik;
         flex-grow: 1; }
         div.aboutContainer > div.aboutBody > div.aboutItems > div > h4 {
           font-weight: 500;

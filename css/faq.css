@@ -32,7 +32,7 @@ div.faqContainer {
           text-transform: uppercase; }
         div.faqContainer > div.faqBody > div.faqLeft > div.faqHeader > h2 {
           font-size: 32px;
-          font-family: Poppins; }
+          font-family: Poppins, Rubik; }
       div.faqContainer > div.faqBody > div.faqLeft > div.faqMore {
         width: 100%;
         padding: 10px 20px;
@@ -65,6 +65,9 @@ div.faqContainer {
             left: 40px;
             height: 1px;
             background-color: #6c757d; }
+          div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem.rtl::after {
+            left: unset;
+            right: 40px; }
           div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem > div {
             display: flex;
             align-items: center;
@@ -77,7 +80,7 @@ div.faqContainer {
             div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem > div > h3 {
               transition: inherit;
               font-size: 18px;
-              font-family: Poppins; }
+              font-family: Poppins, Rubik; }
           div.faqContainer > div.faqBody > div.faqLeft > div.faqMore > div.faqItem > p {
             transition: all 0.15s linear;
             padding: 0 30px;

@@ -1,5 +1,5 @@
 $main-font: Rubik;
-$heading-font: Poppins;
+$heading-font: Poppins, Rubik;
 $light: #dee3e4;
 $darklight: #c8cdce;
 $dark: #212529;
@@ -47,6 +47,7 @@ div.resumeContainer {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: stretch;
       flex-wrap: wrap;
 
       > div.rBTItems {
@@ -61,7 +62,12 @@ div.resumeContainer {
 
         > div {
           border-left: 2px solid $lightLogo;
-          padding: 20px 0 0 16px;
+          padding: 20px 16px 0 16px;
+
+          &.rtl {
+            border-left: unset;
+            border-right: 2px solid $lightLogo;
+          }
 
           &:nth-of-type(1) {
             padding: 0 0 0 16px !important;
@@ -132,7 +138,6 @@ div.resumeContainer {
             overflow: hidden;
 
             > span.skillProgress {
-              width: 75%;
               background-color: $lightLogo;
               background-image: linear-gradient(
                 -45deg,
@@ -178,7 +183,7 @@ div.resumeContainer {
     }
   }
 
-  .button{
+  .button {
     font-size: 16px !important;
   }
 }

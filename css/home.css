@@ -29,7 +29,8 @@ div.introContainer {
     top: 0;
     left: 0;
     z-index: 999;
-    transition: all 0.25s ease; }
+    transition: all 0.25s ease;
+    direction: ltr; }
     div.introContainer > div.menuTop.menuTopBlur {
       backdrop-filter: blur(20px);
       background-color: #0000007c; }
@@ -107,7 +108,7 @@ div.introContainer {
           user-select: none; }
           div.introContainer > div.menuTop > nav > div.menuContainer > div.mainMenu > button.pageLanguage {
             background-color: transparent;
-            font-family: Poppins;
+            font-family: Poppins, Rubik;
             color: #dee3e4;
             position: absolute;
             left: 100px;
@@ -170,7 +171,7 @@ div.introContainer {
       font-weight: 600;
       display: flex;
       align-items: center;
-      font-family: Poppins; }
+      font-family: Poppins, Rubik; }
       div.introContainer > div.infoBody > h2 > p {
         text-transform: capitalize;
         font-family: inherit; }

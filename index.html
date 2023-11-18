@@ -1,589 +1,483 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" / >
-    <meta
-      name="viewport"
-      content="height=device-height, 
+<html lang="en" id="html">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="height=device-height, 
     width=device-width, initial-scale=1.0, 
     minimum-scale=1.0, maximum-scale=1.0, 
-    user-scalable=no, target-densitydpi=device-dpi"
-    />
-    <title>Ali Eslamdoust | Personal Website</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./FontAwesome/css/all.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./media/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./media/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./media/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./media/site.webmanifest" />
-  </head>
-  <body>
-    <div class="introContainer container">
-      <div class="introBg"></div>
-      <div class="menuTop" id="menuTop">
-        <nav>
-          <h1>Ali Eslamdoust</h1>
-          <div class="menuContainer">
-            <a class="menuLink" href="tel:+989197313410"
-              ><i class="fas fa-phone"></i>&nbsp;&nbsp;(919) 731 34 10</a
-            >
-            <div class="menuBtn" id="menuBtn">
-              <span id="menuBar1"></span><span id="menuBar2"></span
-              ><span id="menuBar3"></span>
-            </div>
-            <div class="mainMenu" id="mainMenu">
-              <button class="pageLanguage">EN / FA</button>
-              <ul>
-                <li><div class="menuItem">Home</div></li>
-                <li><div class="menuItem">About Me</div></li>
-                <li><div class="menuItem">What I Do</div></li>
-                <li><div class="menuItem">Resume</div></li>
-                <li><div class="menuItem">Portfolio</div></li>
-                <li><div class="menuItem">FAQ</div></li>
-                <li><div class="menuItem">Client Speak</div></li>
-                <li><div class="menuItem">Contact Me</div></li>
-              </ul>
-              <div class="menuContact">
-                <a href="#" class="fa-brands fa-x-twitter"></a>
-                <a href="#" class="fa-brands fa-telegram"></a>
-                <a href="#" class="fa-brands fa-instagram"></a>
-                <a href="#" class="fa-brands fa-linkedin"></a>
-              </div>
+    user-scalable=no, target-densitydpi=device-dpi" />
+  <title>Ali Eslamdoust | Personal Website</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./FontAwesome/css/all.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./media/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./media/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./media/favicon-16x16.png" />
+  <link rel="manifest" href="./media/site.webmanifest" />
+</head>
+
+<body>
+  <div class="introContainer container">
+    <div class="introBg"></div>
+    <div class="menuTop" id="menuTop">
+      <nav>
+        <h1>Ali Eslamdoust</h1>
+        <div class="menuContainer">
+          <a class="menuLink" href="tel:+989197313410"><i class="fas fa-phone"></i>&nbsp;&nbsp;<span>(919) 731 34
+              10</span></a>
+          <div class="menuBtn" id="menuBtn">
+            <span id="menuBar1"></span><span id="menuBar2"></span><span id="menuBar3"></span>
+          </div>
+          <div class="mainMenu" id="mainMenu">
+            <button class="pageLanguage" id="changeLan">EN / FA</button>
+            <ul>
+              <li>
+                <div class="menuItem"></div>
+              </li>
+              <li>
+                <div class="menuItem"></div>
+              </li>
+              <li>
+                <div class="menuItem"></div>
+              </li>
+              <li>
+                <div class="menuItem"></div>
+              </li>
+              <li>
+                <div class="menuItem"></div>
+              </li>
+              <li>
+                <div class="menuItem"></div>
+              </li>
+              <li>
+                <div class="menuItem"></div>
+              </li>
+              <li>
+                <div class="menuItem"></div>
+              </li>
+            </ul>
+            <div class="menuContact">
+              <a href="#" class="fa-brands fa-x-twitter"></a>
+              <a href="#" class="fa-brands fa-telegram"></a>
+              <a href="#" class="fa-brands fa-instagram"></a>
+              <a href="#" class="fa-brands fa-linkedin"></a>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </div>
+    <div class="infoBody">
+      <h3 lnText="infoHead"></h3>
+      <h2>
+        <p id="TypingAnimation"></p>
+        <span id="typePointer">|</span>
+      </h2>
+      <h4 lnText="infoLive"></h4>
+      <a lnText="infoLink" href="#" class="buttonLink"></a>
+      <span class="fa-solid fa-arrow-down"></span>
+    </div>
+  </div>
+  <div class="aboutContainer container">
+    <div class="sectoinHeader fadeBottom">
+      <span lnText="aboutHead"></span>
+      <h2 lnText="aboutHead1"></h2>
+    </div>
+    <div class="aboutBody">
+      <div class="aboutBodyTop fadeBottom">
+        <div class="aboutText">
+          <h2 lnText="aboutBodyHead"></h2>
+          <p lnText="aboutBodyText"></p>
+        </div>
+        <div class="aboutLogo">
+          <span><i>+100</i></span>
+          <p lnText="aboutCompleted"></p>
+        </div>
       </div>
-      <div class="infoBody">
-        <h3>Hi, I'm</h3>
-        <h2>
-          <p id="TypingAnimation"></p>
-          <span id="typePointer">|</span>
-        </h2>
-        <h4>based in Tehran, Iran.</h4>
-        <a href="#" class="buttonLink">View My Works</a>
-        <span class="fa-solid fa-arrow-down"></span>
+      <div class="aboutItems">
+        <div class="fadeLeft">
+          <h4 lnText="aboutName"></h4>
+          <p lnText="aboutName1"></p>
+        </div>
+        <div class="fadeLeft">
+          <h4 lnText="aboutMail"></h4>
+          <a lnText="aboutMail1" href="mailto:alieslamdoust@outlook.com"></a>
+        </div>
+        <div class="fadeRight">
+          <h4 lnText="aboutBirth"></h4>
+          <p lnText="aboutBirth1"></p>
+        </div>
+        <div class="fadeRight">
+          <h4 lnText="aboutLive"></h4>
+          <p lnText="aboutLive1"></p>
+        </div>
       </div>
     </div>
-    <div class="aboutContainer container">
-      <div class="sectoinHeader fadeBottom">
-        <span>About Me</span>
-        <h2>Know Me More</h2>
+  </div>
+  <div class="widContainer container">
+    <div class="sectoinHeader fadeBottom">
+      <span lnText="widHead"></span>
+      <h2 lnText="widHead1"></h2>
+    </div>
+    <div class="widBody" id="widBody">
+      <div class="widItem fadeBottom">
+        <i class="fa-duotone fa-code"></i>
+        <h4 class="widBodyHead"></h4>
+        <p class="widBodyText">
+        </p>
       </div>
-      <div class="aboutBody">
-        <div class="aboutBodyTop fadeBottom">
-          <div class="aboutText">
-            <h2>Hi, I'm&nbsp;<strong>Ali Eslamdoust</strong></h2>
-            <p>
-              a designer & developer with a passion for web design. I enjoy
-              developing simple, clean and slick websites that provide real
-              value to the end user. Hundreds of clients have procured
-              exceptional results while working with me. Delivering work within
-              time and budget which meets client’s requirements is our moto.
+      <div class="widItem fadeBottom">
+        <i class="fa-duotone fa-paintbrush"></i>
+        <h4 class="widBodyHead"></h4>
+        <p class="widBodyText">
+        </p>
+      </div>
+      <div class="widItem fadeBottom">
+        <i class="fa-duotone fa-chart-mixed"></i>
+        <h4 class="widBodyHead"></h4>
+        <p class="widBodyText">
+        </p>
+      </div>
+      <div class="widItem fadeBottom">
+        <i class="fa-duotone fa-object-group"></i>
+        <h4 class="widBodyHead"></h4>
+        <p class="widBodyText">
+        </p>
+      </div>
+      <div class="widItem fadeBottom">
+        <i class="fa-duotone fa-window"></i>
+        <h4 class="widBodyHead"></h4>
+        <p class="widBodyText">
+        </p>
+      </div>
+      <div class="widItem fadeBottom">
+        <i class="fa-duotone fa-megaphone"></i>
+        <h4 class="widBodyHead"></h4>
+        <p class="widBodyText">
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="resumeContainer container">
+    <div class="sectoinHeader fadeBottom">
+      <span lnText="resumeHead"></span>
+      <h2 lnText="resumeHead1"></h2>
+    </div>
+    <div class="resumeBody">
+      <div class="resumeBodyTop">
+        <div class="rBTItems fadeLeft">
+          <h3 lnText="resumeBodyHead"></h3>
+          <div>
+            <h4 class="educationHead"></h4>
+            <h5 class="educationSubhead"></h5>
+            <p class="educationText">
             </p>
           </div>
-          <div class="aboutLogo">
-            <span><i>+100</i></span>
-            <p><strong>completed</strong>&nbsp;Projects</p>
+          <div>
+            <h4 class="educationHead"></h4>
+            <h5 class="educationSubhead"></h5>
+            <p class="educationText">
+            </p>
           </div>
         </div>
-        <div class="aboutItems">
-          <div class="fadeLeft">
-            <h4>Name:</h4>
-            <p>Ali Eslamdoust</p>
+        <div class="rBTItems fadeRight">
+          <h3 lnText="resumeBodyHead1"></h3>
+          <div>
+            <h4 class="educationHead"></h4>
+            <h5 class="educationSubhead"></h5>
+            <p class="educationText">
+            </p>
           </div>
-          <div class="fadeLeft">
-            <h4>Email:</h4>
-            <a href="mailto:alieslamdoust@outlook.com"
-              >AliEslamdoust@outlook.com</a
-            >
+          <div>
+            <h4 class="educationHead"></h4>
+            <h5 class="educationSubhead"></h5>
+            <p class="educationText">
+            </p>
           </div>
-          <div class="fadeRight">
-            <h4>Date of Birth:</h4>
-            <p>22 September, 1994</p>
-          </div>
-          <div class="fadeRight">
-            <h4>From:</h4>
-            <p>Tehran, Iran</p>
+          <div>
+            <h4 class="educationHead"></h4>
+            <h5 class="educationSubhead"></h5>
+            <p class="educationText">
+            </p>
           </div>
         </div>
+      </div>
+      <div class="resumeBodyBottom fadeBottom">
+        <h3 lnText="resumeSkillHead"></h3>
+        <div class="skillsBar">
+          <div class="skillItem">
+            <div class="skillHeader">
+              <h4 class="skillTopic"></h4>
+              <span class="skillPercent"><span class="progressPercent"></span>%</span>
+            </div>
+            <div class="skillBar"><span class="skillProgress"></span></div>
+          </div>
+          <div class="skillItem">
+            <div class="skillHeader">
+              <h4 class="skillTopic"></h4>
+              <span class="skillPercent"><span class="progressPercent"></span>%</span>
+            </div>
+            <div class="skillBar"><span class="skillProgress"></span></div>
+          </div>
+          <div class="skillItem">
+            <div class="skillHeader">
+              <h4 class="skillTopic"></h4>
+              <span class="skillPercent"><span class="progressPercent"></span>%</span>
+            </div>
+            <div class="skillBar"><span class="skillProgress"></span></div>
+          </div>
+          <div class="skillItem">
+            <div class="skillHeader">
+              <h4 class="skillTopic"></h4>
+              <span class="skillPercent"><span class="progressPercent"></span>%</span>
+            </div>
+            <div class="skillBar"><span class="skillProgress"></span></div>
+          </div>
+          <div class="skillItem">
+            <div class="skillHeader">
+              <h4 class="skillTopic"></h4>
+              <span class="skillPercent"><span class="progressPercent"></span>%</span>
+            </div>
+            <div class="skillBar"><span class="skillProgress"></span></div>
+          </div>
+          <div class="skillItem">
+            <div class="skillHeader">
+              <h4 class="skillTopic"></h4>
+              <span class="skillPercent"><span class="progressPercent"></span>%</span>
+            </div>
+            <div class="skillBar"><span class="skillProgress"></span></div>
+          </div>
+        </div>
+        <a href="#" lnText="resumeLink"></a>
       </div>
     </div>
-    <div class="widContainer container">
-      <div class="sectoinHeader fadeBottom">
-        <span>What I Do?</span>
-        <h2>How I can help your next project</h2>
+  </div>
+  <div class="portfolioContainer container">
+    <div class="sectoinHeader fadeBottom">
+      <span lnText="portfolioHead"></span>
+      <h2 lnText="portfolioHead1"></h2>
+    </div>
+    <div class="portfolioBody fadeLeft">
+      <div class="portfolioBodyTop">
+        <ul>
+          <li class="portfolioTopics" portfolioActivator="All" lnText="portfolioFilter0">
+
+          </li>
+          <li class="portfolioTopics" portfolioActivator="Detailed" lnText="portfolioFilter1">
+
+          </li>
+          <li class="portfolioTopics" portfolioActivator="Designs" lnText="portfolioFilter2">
+
+          </li>
+          <li class="portfolioTopics" portfolioActivator="Mockups" lnText="portfolioFilter3">
+
+          </li>
+        </ul>
       </div>
-      <div class="widBody">
-        <div class="widItem fadeBottom">
-          <i class="fa-duotone fa-code"></i>
-          <h4>Web Design</h4>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut a est
-            non eaque nam quisquam iure dignissimos laudantium, dolores deleniti
-            culpa sint consectetur eius deserunt temporibus obcaecati mollitia
-            quae quam.
-          </p>
-        </div>
-        <div class="widItem fadeBottom">
-          <i class="fa-duotone fa-paintbrush"></i>
-          <h4>Graphic Design</h4>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut a est
-            non eaque nam quisquam iure dignissimos laudantium, dolores deleniti
-            culpa sint consectetur eius deserunt temporibus obcaecati mollitia
-            quae quam.
-          </p>
-        </div>
-        <div class="widItem fadeBottom">
-          <i class="fa-duotone fa-chart-mixed"></i>
-          <h4>Business Analysis</h4>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut a est
-            non eaque nam quisquam iure dignissimos laudantium, dolores deleniti
-            culpa sint consectetur eius deserunt temporibus obcaecati mollitia
-            quae quam.
-          </p>
-        </div>
-        <div class="widItem fadeBottom">
-          <i class="fa-duotone fa-object-group"></i>
-          <h4>UI/UX Design</h4>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut a est
-            non eaque nam quisquam iure dignissimos laudantium, dolores deleniti
-            culpa sint consectetur eius deserunt temporibus obcaecati mollitia
-            quae quam.
-          </p>
-        </div>
-        <div class="widItem fadeBottom">
-          <i class="fa-duotone fa-window"></i>
-          <h4>App Design & Develop</h4>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut a est
-            non eaque nam quisquam iure dignissimos laudantium, dolores deleniti
-            culpa sint consectetur eius deserunt temporibus obcaecati mollitia
-            quae quam.
-          </p>
-        </div>
-        <div class="widItem fadeBottom">
-          <i class="fa-duotone fa-megaphone"></i>
-          <h4>SEO Marketing</h4>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut a est
-            non eaque nam quisquam iure dignissimos laudantium, dolores deleniti
-            culpa sint consectetur eius deserunt temporibus obcaecati mollitia
-            quae quam.
-          </p>
-        </div>
+      <div class="portfolioBodyBottom">
+        <ul id="portfolioContainer">
+          <li class="portfolioItem" portfolioItem="Detailed" id="portfolioItem">
+            <img/>
+            <div class="porfolioItemAbsolute">
+              <i class="fa-duotone fa-file"></i>
+              <h3 class="portfolioHead"></h3>
+              <h4 class="portfolioText"></h4>
+            </div>
+          </li>
+          <li class="portfolioItem" portfolioItem="Designs">
+            <img/>
+            <div class="porfolioItemAbsolute">
+              <i class="fa-duotone fa-file"></i>
+              <h3 class="portfolioHead"></h3>
+              <h4 class="portfolioText"></h4>
+            </div>
+          </li>
+          <li class="portfolioItem" portfolioItem="Designs">
+            <img/>
+            <div class="porfolioItemAbsolute">
+              <i class="fa-duotone fa-file"></i>
+              <h3 class="portfolioHead"></h3>
+              <h4 class="portfolioText"></h4>
+            </div>
+          </li>
+          <li class="portfolioItem" portfolioItem="Mockups">
+            <img/>
+            <div class="porfolioItemAbsolute">
+              <i class="fa-duotone fa-file"></i>
+              <h3 class="portfolioHead"></h3>
+              <h4 class="portfolioText"></h4>
+            </div>
+          </li>
+          <li class="portfolioItem" portfolioItem="Detailed">
+            <img/>
+            <div class="porfolioItemAbsolute">
+              <i class="fa-duotone fa-file"></i>
+              <h3 class="portfolioHead"></h3>
+              <h4 class="portfolioText"></h4>
+            </div>
+          </li>
+          <li class="portfolioItem" portfolioItem="Mockups">
+            <img/>
+            <div class="porfolioItemAbsolute">
+              <i class="fa-duotone fa-file"></i>
+              <h3 class="portfolioHead"></h3>
+              <h4 class="portfolioText"></h4>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="resumeContainer container">
-      <div class="sectoinHeader fadeBottom">
-        <span>Resume</span>
-        <h2>A summary of My Resume</h2>
-      </div>
-      <div class="resumeBody">
-        <div class="resumeBodyTop">
-          <div class="rBTItems fadeLeft">
-            <h3>My Education</h3>
+  </div>
+  <div class="portfolioHire">
+    <img src="./media/intro-bg-2.jpg" alt="" id="hireMeImg" />
+    <div class="portfolioHContent fadeBottom">
+      <h2 lnText="hireMeHead"></h2>
+      <button id="hireMe" lnText="hireMeLink"></button>
+    </div>
+  </div>
+  <div class="faqContainer container">
+    <div class="faqBody">
+      <div class="faqLeft fadeLeft">
+        <div class="faqHeader">
+          <span lnText="faqHead"></span>
+          <h2 lnText="faqHead1"></h2>
+        </div>
+        <div class="faqMore">
+          <div class="faqItem">
             <div>
-              <h4>Master in Computer Engineering</h4>
-              <h5>Azad University</h5>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
-                asperiores? Fugit odit illo consequatur totam modi sapiente
-                reprehenderit a libero ratione delectus.
-              </p>
+              <span class="fas fa-chevron-down"></span>
+              <h3 class="faqQuestion"></h3>
             </div>
-            <div>
-              <h4>Master in Computer Engineering</h4>
-              <h5>Azad University</h5>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
-                asperiores? Fugit odit illo consequatur totam modi sapiente
-                reprehenderit a libero ratione delectus.
-              </p>
-            </div>
-            <div>
-              <h4>Master in Computer Engineering</h4>
-              <h5>Azad University</h5>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
-                asperiores? Fugit odit illo consequatur totam modi sapiente
-                reprehenderit a libero ratione delectus.
-              </p>
-            </div>
+            <p class="faqItemBody">
+            </p>
           </div>
-          <div class="rBTItems fadeRight">
-            <h3>My Experience</h3>
+          <div class="faqItem">
             <div>
-              <h4>Master in Computer Engineering</h4>
-              <h5>Azad University</h5>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
-                asperiores? Fugit odit illo consequatur totam modi sapiente
-                reprehenderit a libero ratione delectus.
-              </p>
+              <span class="fas fa-chevron-down"></span>
+              <h3 class="faqQuestion"></h3>
             </div>
+            <p class="faqItemBody">
+            </p>
+          </div>
+          <div class="faqItem">
             <div>
-              <h4>Master in Computer Engineering</h4>
-              <h5>Azad University</h5>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
-                asperiores? Fugit odit illo consequatur totam modi sapiente
-                reprehenderit a libero ratione delectus.
-              </p>
+              <span class="fas fa-chevron-down"></span>
+              <h3 class="faqQuestion"></h3>
             </div>
-            <div>
-              <h4>Master in Computer Engineering</h4>
-              <h5>Azad University</h5>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
-                asperiores? Fugit odit illo consequatur totam modi sapiente
-                reprehenderit a libero ratione delectus.
-              </p>
-            </div>
+            <p class="faqItemBody">
+            </p>
           </div>
         </div>
-        <div class="resumeBodyBottom fadeBottom">
-          <h3>My Skills</h3>
-          <div class="skillsBar">
-            <div class="skillItem">
-              <div class="skillHeader">
-                <h4>Web Design</h4>
-                <span class="skillPercent">75%</span>
-              </div>
-              <div class="skillBar"><span class="skillProgress"></span></div>
-            </div>
-            <div class="skillItem">
-              <div class="skillHeader">
-                <h4>Web Design</h4>
-                <span class="skillPercent">75%</span>
-              </div>
-              <div class="skillBar"><span class="skillProgress"></span></div>
-            </div>
-            <div class="skillItem">
-              <div class="skillHeader">
-                <h4>Web Design</h4>
-                <span class="skillPercent">75%</span>
-              </div>
-              <div class="skillBar"><span class="skillProgress"></span></div>
-            </div>
-            <div class="skillItem">
-              <div class="skillHeader">
-                <h4>Web Design</h4>
-                <span class="skillPercent">75%</span>
-              </div>
-              <div class="skillBar"><span class="skillProgress"></span></div>
-            </div>
-            <div class="skillItem">
-              <div class="skillHeader">
-                <h4>Web Design</h4>
-                <span class="skillPercent">75%</span>
-              </div>
-              <div class="skillBar"><span class="skillProgress"></span></div>
-            </div>
-            <div class="skillItem">
-              <div class="skillHeader">
-                <h4>Web Design</h4>
-                <span class="skillPercent">75%</span>
-              </div>
-              <div class="skillBar"><span class="skillProgress"></span></div>
-            </div>
-          </div>
-          <a href="#">Download CV</a>
-        </div>
+      </div>
+      <div class="faqRight fadeRight">
+        <img src="./media/faq.png" alt="" />
       </div>
     </div>
-    <div class="portfolioContainer container">
-      <div class="sectoinHeader fadeBottom">
-        <span>Potfolio</span>
-        <h2>Some of my most recent projects</h2>
+  </div>
+  <div class="cSContainer container">
+    <div class="sectoinHeader fadeBottom">
+      <span lnText="csHead"></span>
+      <h2 lnText="csHead1"></h2>
+    </div>
+    <div class="swiperContainer fadeBottom">
+      <div class="sliderContainer" id="sliderFather">
+        <div class="slidersContainer" id="sliderContainer">
+          <div class="slider">
+            <q class="sliderText">
+            </q>
+            <img class="sliderImg"/>
+            <h4 class="sliderName"></h4>
+            <span class="sliderAddress"></span>
+          </div>
+          <div class="slider">
+            <q class="sliderText">
+            </q>
+            <img class="sliderImg"/>
+            <h4 class="sliderName"></h4>
+            <span class="sliderAddress"></span>
+          </div>
+          <div class="slider">
+            <q class="sliderText">
+            </q>
+            <img class="sliderImg"/>
+            <h4 class="sliderName"></h4>
+            <span class="sliderAddress"></span>
+          </div>
+          <div class="slider">
+            <q class="sliderText">
+            </q>
+            <img class="sliderImg"/>
+            <h4 class="sliderName"></h4>
+            <span class="sliderAddress"></span>
+          </div>
+        </div>
       </div>
-      <div class="portfolioBody fadeLeft">
-        <div class="portfolioBodyTop">
-          <ul>
-            <li class="portfolioTopics" portfolioActivator="All">All</li>
-            <li class="portfolioTopics" portfolioActivator="Detailed">
-              Detailed Projects
-            </li>
-            <li class="portfolioTopics" portfolioActivator="Designs">
-              Designs
-            </li>
-            <li class="portfolioTopics" portfolioActivator="Mockups">
-              Mockups
-            </li>
-          </ul>
+      <div class="sliderControl">
+        <div id="sliderNext">
+          <span class="fas fa-chevron-right"></span>
         </div>
-        <div class="portfolioBodyBottom">
-          <ul id="portfolioContainer">
-            <li
-              class="portfolioItem"
-              portfolioItem="Detailed"
-              id="portfolioItem"
-            >
-              <img src="./media/project-1.jpg" alt="" />
-              <div class="porfolioItemAbsolute">
-                <i class="fa-duotone fa-file"></i>
-                <h3>Portfolio Item</h3>
-                <h4>Portflio Description</h4>
-              </div>
-            </li>
-            <li class="portfolioItem" portfolioItem="Designs">
-              <img src="./media/project-2.jpg" alt="" />
-              <div class="porfolioItemAbsolute">
-                <i class="fa-duotone fa-file"></i>
-                <h3>Portfolio Item</h3>
-                <h4>Portflio Description</h4>
-              </div>
-            </li>
-            <li class="portfolioItem" portfolioItem="Designs">
-              <img src="./media/project-3.jpg" alt="" />
-              <div class="porfolioItemAbsolute">
-                <i class="fa-duotone fa-file"></i>
-                <h3>Portfolio Item</h3>
-                <h4>Portflio Description</h4>
-              </div>
-            </li>
-            <li class="portfolioItem" portfolioItem="Mockups">
-              <img src="./media/project-4.jpg" alt="" />
-              <div class="porfolioItemAbsolute">
-                <i class="fa-duotone fa-file"></i>
-                <h3>Portfolio Item</h3>
-                <h4>Portflio Description</h4>
-              </div>
-            </li>
-            <li class="portfolioItem" portfolioItem="Detailed">
-              <img src="./media/project-5.jpg" alt="" />
-              <div class="porfolioItemAbsolute">
-                <i class="fa-duotone fa-file"></i>
-                <h3>Portfolio Item</h3>
-                <h4>Portflio Description</h4>
-              </div>
-            </li>
-            <li class="portfolioItem" portfolioItem="Mockups">
-              <img src="./media/project-6.jpg" alt="" />
-              <div class="porfolioItemAbsolute">
-                <i class="fa-duotone fa-file"></i>
-                <h3>Portfolio Item</h3>
-                <h4>Portflio Description</h4>
-              </div>
-            </li>
-          </ul>
+        <div id="sliderPrev">
+          <span class="fas fa-chevron-left"></span>
         </div>
+      </div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </div>
+  <div class="contactContainer container">
+    <div class="contactBody">
+      <div class="contactBodyLeft fadeLeft">
+        <h2 lnText="contactHead"></h2>
+        <p lnText="contactText">
+
+        </p>
+        <div class="contactTextContainer">
+          <div>
+            <h3 lnText="contactLive"></h3>
+            <span lnText="contactLive1"></span>
+          </div>
+          <div>
+            <h3 lnText="contactCall"></h3>
+            <a lnText="contactCall1" href="tel:+989197313410"></a>
+          </div>
+        </div>
+        <div class="contactIcons">
+          <a href="" class="fab fa-x-twitter"></a>
+          <a href="" class="fab fa-instagram"></a>
+          <a href="" class="fab fa-linkedin"></a>
+          <a href="" class="fab fa-telegram"></a>
+        </div>
+      </div>
+      <div class="contactBodyRight fadeRight">
+        <h2 lnText="contactHead1"></h2>
+        <form>
+          <label lnText="contactName"></label>
+          <input type="text" name="fullName" required />
+          <label lnText="contactEmail"></label>
+          <input type="email" name="email" required />
+          <label lnText="contactInput"></label>
+          <textarea name="text" cols="5" rows="5" required></textarea>
+          <button type="submit">
+            <span lnText="contactBtn"></span>&nbsp;
+            <span class="fas fa-arrow-right"></span>
+          </button>
+        </form>
       </div>
     </div>
-    <div class="portfolioHire">
-      <img src="./media/intro-bg-2.jpg" alt="" id="hireMeImg" />
-      <div class="portfolioHContent fadeBottom">
-        <h2>Interested in working with me?</h2>
-        <button id="hireMe">Hire Me!</button>
+  </div>
+  <div class="footer">
+    <div class="footerBody">
+      <div class="footerLeft">
+        <p lnText="footer">
+          Copyright&nbsp;&copy;&nbsp;2023&nbsp;<a href="#">Ali Eslamdoust</a>
+          &nbsp;<span>&nbsp;</span>&nbsp;All Rights Reserved.
+        </p>
+      </div>
+      <div class='footerRight'>
+        <p lnText="footer1">Designed by&nbsp;<a href="#">Ali Eslamdoust</a></p>
       </div>
     </div>
-    <div class="faqContainer container">
-      <div class="faqBody">
-        <div class="faqLeft fadeLeft">
-          <div class="faqHeader">
-            <span>faq</span>
-            <h2>Have any questions?</h2>
-          </div>
-          <div class="faqMore">
-            <div class="faqItem">
-              <div>
-                <span class="fas fa-chevron-down"></span>
-                <h3>Why Trust Me?</h3>
-              </div>
-              <p class="faqItemBody">
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure. Mutat tacimates id sit. Ridens
-                mediocritatem ius an, eu nec magna imperdiet.
-              </p>
-            </div>
-            <div class="faqItem">
-              <div>
-                <span class="fas fa-chevron-down"></span>
-                <h3>Why Trust Me?</h3>
-              </div>
-              <p class="faqItemBody">
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure. Mutat tacimates id sit. Ridens
-                mediocritatem ius an, eu nec magna imperdiet.
-              </p>
-            </div>
-            <div class="faqItem">
-              <div>
-                <span class="fas fa-chevron-down"></span>
-                <h3>Why Trust Me?</h3>
-              </div>
-              <p class="faqItemBody">
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure. Mutat tacimates id sit. Ridens
-                mediocritatem ius an, eu nec magna imperdiet.
-              </p>
-            </div>
-            <div class="faqItem">
-              <div>
-                <span class="fas fa-chevron-down"></span>
-                <h3>Why Trust Me?</h3>
-              </div>
-              <p class="faqItemBody">
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure. Mutat tacimates id sit. Ridens
-                mediocritatem ius an, eu nec magna imperdiet.
-              </p>
-            </div>
-            <div class="faqItem">
-              <div>
-                <span class="fas fa-chevron-down"></span>
-                <h3>Why Trust Me?</h3>
-              </div>
-              <p class="faqItemBody">
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure. Mutat tacimates id sit. Ridens
-                mediocritatem ius an, eu nec magna imperdiet.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="faqRight fadeRight">
-          <img src="./media/faq.png" alt="" />
-        </div>
-      </div>
-    </div>
-    <div class="cSContainer container">
-      <div class="sectoinHeader fadeBottom">
-        <span>Client Speak</span>
-        <h2>What Some of my Clients Say</h2>
-      </div>
-      <div class="swiperContainer fadeBottom">
-        <div class="sliderContainer" id="sliderFather">
-          <div class="slidersContainer" id="sliderContainer">
-            <div class="slider">
-              <q>
-                1 I have used them twice now. Good rates, very efficient service
-                and priced simply dummy text of the printing and typesetting
-                industry quidam interesset his et. simply dummy text of the
-                printing and typesetting industry. Excellent.
-              </q>
-              <img src="./media/client-sm-2.jpg" alt="" />
-              <h4>Patrick Cary</h4>
-              <span>User From UK</span>
-            </div>
-            <div class="slider">
-              <q>
-                2 I have used them twice now. Good rates, very efficient service
-                and priced simply dummy text of the printing and typesetting
-                industry quidam interesset his et. simply dummy text of the
-                printing and typesetting industry. Excellent.
-              </q>
-              <img src="./media/client-sm-2.jpg" alt="" />
-              <h4>Patrick Cary</h4>
-              <span>User From UK</span>
-            </div>
-            <div class="slider">
-              <q>
-                3 I have used them twice now. Good rates, very efficient service
-                and priced simply dummy text of the printing and typesetting
-                industry quidam interesset his et. simply dummy text of the
-                printing and typesetting industry. Excellent.
-              </q>
-              <img src="./media/client-sm-2.jpg" alt="" />
-              <h4>Patrick Cary</h4>
-              <span>User From UK</span>
-            </div>
-            <div class="slider">
-              <q>
-                4 I have used them twice now. Good rates, very efficient service
-                and priced simply dummy text of the printing and typesetting
-                industry quidam interesset his et. simply dummy text of the
-                printing and typesetting industry. Excellent.
-              </q>
-              <img src="./media/client-sm-2.jpg" alt="" />
-              <h4>Patrick Cary</h4>
-              <span>User From UK</span>
-            </div>
-          </div>
-        </div>
-        <div class="sliderControl">
-          <div id="sliderNext">
-            <span class="fas fa-chevron-right"></span>
-          </div>
-          <div id="sliderPrev">
-            <span class="fas fa-chevron-left"></span>
-          </div>
-        </div>
-        <div class="pagination" id="pagination"></div>
-      </div>
-    </div>
-    <div class="contactContainer container">
-      <div class="contactBody">
-        <div class="contactBodyLeft fadeLeft">
-          <h2>Let's get in touch</h2>
-          <p>
-            I enjoy discussing new projects and design challenges. Please share
-            as much info, as possible so we can get the most out of our first
-            catch-up.
-          </p>
-          <div class="contactTextContainer">
-            <div>
-              <h3>Living in:</h3>
-              <span>Tehran</span>
-            </div>
-            <div>
-              <h3>Call:</h3>
-              <a href="tel:+989197313410">0919 731 3410</a>
-            </div>
-          </div>
-          <div class="contactIcons">
-            <a href="" class="fab fa-x-twitter"></a>
-            <a href="" class="fab fa-instagram"></a>
-            <a href="" class="fab fa-linkedin"></a>
-            <a href="" class="fab fa-telegram"></a>
-          </div>
-        </div>
-        <div class="contactBodyRight fadeRight">
-          <h2>Estimate your Project?</h2>
-          <form>
-            <label>What is your name:</label>
-            <input type="text" name="fullName" required />
-            <label>Your Email Addess</label>
-            <input type="email" name="email" required />
-            <label>How can I Help you?:</label>
-            <textarea name="text" cols="5" rows="5" required></textarea>
-            <button type="submit">
-              Send&nbsp;<span class="fas fa-arrow-right"></span>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="footerBody">
-        <div class="footerLeft">
-          <p>
-            Copyright&nbsp;&copy;&nbsp;2023&nbsp;<a href="#">Ali Eslamdoust</a>
-            &nbsp;<span>&nbsp;</span>&nbsp;All Rights Reserved.
-          </p>
-        </div>
-        <div class="footerRight">
-          <p>Designed by&nbsp;<a href="#">Ali Eslamdoust</a></p>
-        </div>
-      </div>
-    </div>
-    <script src="./jquery/dist/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+  </div>
+  <script src=./jquery/dist/jquery.min.js></script>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

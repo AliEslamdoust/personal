@@ -221,14 +221,22 @@ function removeActiveFAQ() {
 // slider fixed height
 let sliderContainer = document.getElementById("sliderContainer");
 
+let firstChange = false;
 function resizeSlider() {
-  let swiperHeight = sliderContainer.getBoundingClientRect().height;
+  let sliderHeight = document
+    .getElementById("sliderContainer")
+    .getBoundingClientRect().height;
+
+  if (!firstChange) {
+    sliderHeight += 64;
+    firstChange = true;
+  }
+
   document.documentElement.style.setProperty(
     `--sliderHeight`,
-    `${swiperHeight + 20}px`
+    `${sliderHeight}px`
   );
 }
-resizeSlider();
 
 window.addEventListener("resize", resizeSlider);
 
@@ -255,7 +263,10 @@ function moveSlider() {
   if (sliderIndex < sliders.length - 1) {
     sliderIndex++;
     changePagination();
-    sliderContainer.className = `slidersContainer translateX-${sliderIndex}`;
+    document.documentElement.style.setProperty(
+      `--sliderMovement`,
+      `${-sliderIndex * 100}%`
+    );
     clearSliderTimout();
     callSliderTimeout();
   } else {
@@ -458,3 +469,128 @@ function resizeHireMe() {
     `${hireMeImg.getBoundingClientRect().height}px`
   );
 }
+
+let language = "en-us";
+
+function textsLanguage() {
+  const xhttp = new XMLHttpRequest();
+
+  xhttp.onload = function () {
+    let data = JSON.parse(this.responseText);
+    let allElements = document.querySelectorAll("[lnText]");
+    let menuBtns = document.querySelectorAll(".menuItem");
+
+    // menu buttons text
+    menuBtns.forEach((elem, index) => {
+      elem.innerHTML = data.menuBtn[index];
+    });
+
+    // what i do elements
+    let widHead = document.querySelectorAll(".widBodyHead");
+    let widText = document.querySelectorAll(".widBodyText");
+    widHead.forEach((elem, index) => {
+      elem.innerHTML = data.widBodyHead[index];
+      widText[index].innerHTML = data.widBodyText[index];
+    });
+
+    // resume elements (first two are for education and the last three are for experience)
+    let resumeHead = document.querySelectorAll(".educationHead");
+    resumeHead.forEach((elem, index) => {
+      elem.innerHTML = data.educationHead[index];
+      document.querySelectorAll(".educationSubhead")[index].innerHTML =
+        data.educationsubhead[index];
+      document.querySelectorAll(".educationText")[index].innerHTML =
+        data.educationText[index];
+    });
+
+    // skills and progress bar
+    let skills = document.querySelectorAll(".skillTopic");
+    let skillsPercent = document.querySelectorAll(".progressPercent");
+    let skillProgress = document.querySelectorAll(".skillProgress");
+    skills.forEach((elem, index) => {
+      elem.innerHTML = data.skillTopic[index];
+      skillsPercent[index].innerHTML = data.progressPercent[index];
+      skillProgress[index].style.width = data.progressPercent[index] + "%";
+    });
+
+    // portfolio items
+    let portfolioItems = document.querySelectorAll(".portfolioHead");
+    let portfolioItemsText = document.querySelectorAll(".portfolioText");
+    let portfolioItemsImg = document.querySelectorAll("li.portfolioItem>img");
+    portfolioItems.forEach((elem, index) => {
+      elem.innerHTML = data.portfolioItemsHead[index];
+      portfolioItemsText[index].innerHTML = data.portfolioItemsText[index];
+      portfolioItemsImg[index].src = data.portfolioItemsImg[index];
+      portfolioItemsImg[index].alt = data.portfolioItemsText[index];
+    });
+
+    // faq items
+    let faqItems = document.querySelectorAll(".faqQuestion");
+    let faqText = document.querySelectorAll(".faqItemBody");
+    faqItems.forEach((elem, index) => {
+      elem.innerHTML = data.FAQuestion[index];
+      faqText[index].innerHTML = data.FAnswer[index];
+    });
+
+    // making slider elements
+    let sliderText = document.querySelectorAll(".sliderText");
+    let sliderImg = document.querySelectorAll(".sliderImg");
+    let sliderName = document.querySelectorAll(".sliderName");
+    let sliderAddress = document.querySelectorAll(".sliderAddress");
+    sliderText.forEach((elem, index) => {
+      elem.innerHTML = data.sliderText[index];
+      sliderImg[index].src = data.sliderImg[index];
+      sliderName[index].innerHTML = data.sliderName[index];
+      sliderAddress[index].innerHTML = data.sliderAddress[index];
+    });
+    resizeSlider();
+
+    // rest of the page
+    allElements.forEach((elem) => {
+      let elementName = elem.getAttribute("lnText");
+      if (elem.getAttribute("lnText") == elementName && elementName != "") {
+        elem.innerHTML = data[elementName];
+      }
+    });
+  };
+
+  xhttp.open("GET", `../ln/${language}.json`);
+  xhttp.send();
+}
+
+textsLanguage();
+
+let lanBtn = document.getElementById("changeLan");
+lanBtn.addEventListener("click", function () {
+  if (language == "en-us") {
+    language = "fa-ir";
+  } else {
+    language = "en-us";
+  }
+  textsLanguage();
+  changeLan();
+});
+
+let html = document.getElementById("html");
+function changeLan() {
+  if (language == "en-us") {
+    pageElements.push(fadeInRight);
+    fixLtrRtl();
+    html.dir = "ltr";
+    texts = ["Ali Eslamdoust", "A Web Developer", "A Designer"];
+  } else {
+    pageElements.push(fadeInLeft);
+    fixLtrRtl();
+    html.dir = "rtl";
+    texts = ["علی اسلام دوست هستم", "یک طراح وب هستم", "یک UI/UX کار هستم"];
+  }
+}
+changeLan();
+
+function fixLtrRtl() {
+  let faqItems = document.querySelectorAll(".faqItem");
+  let resumeItems = document.querySelectorAll(".rBTItems>div");
+  faqItems.forEach((elem) => elem.classList.toggle("rtl"));
+  resumeItems.forEach((elem) => elem.classList.toggle("rtl"));
+}
+fixLtrRtl();
