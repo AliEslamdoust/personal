@@ -41,7 +41,7 @@ div.resumeContainer {
             border-left: unset;
             border-right: 2px solid #deb887; }
           div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div:nth-of-type(1) {
-            padding: 0 0 0 16px !important; }
+            padding: 0 16px !important; }
           div.resumeContainer > div.resumeBody > div.resumeBodyTop > div.rBTItems > div > h4 {
             font-size: 22px;
             font-weight: 700;
