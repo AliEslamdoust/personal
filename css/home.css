@@ -207,6 +207,8 @@ div.introContainer {
     justify-content: center !important;
     gap: 0 !important;
     padding-top: 65px !important; }
+    div.mainMenu.itemActive {
+      transition: none !important; }
     div.mainMenu * {
       white-space: nowrap; }
     div.mainMenu > button {

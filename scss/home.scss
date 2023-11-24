@@ -304,6 +304,10 @@ div.introContainer {
     gap: 0 !important;
     padding-top: 65px !important;
 
+    &.itemActive{
+    transition: none !important;
+    }
+
     * {
       white-space: nowrap;
     }

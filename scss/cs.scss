@@ -49,6 +49,10 @@ div.cSContainer {
     transition: all 0.25s ease;
     height: var(--sliderHeight);
 
+    &.itemActive {
+      transition: none !important;
+    }
+
     &:hover div.sliderControl {
       opacity: 1;
     }

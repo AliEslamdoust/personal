@@ -25,6 +25,8 @@ div.cSContainer {
     position: relative;
     transition: all 0.25s ease;
     height: var(--sliderHeight); }
+    div.cSContainer > div.swiperContainer.itemActive {
+      transition: none !important; }
     div.cSContainer > div.swiperContainer:hover div.sliderControl {
       opacity: 1; }
     div.cSContainer > div.swiperContainer * {

@@ -330,6 +330,7 @@ sliderContainer.addEventListener("mousedown", function (e) {
   clearSliderTimout();
   startX = e.clientX;
   isMoving = true;
+  removeTransition(sliderContainer);
 
   this.addEventListener("mousemove", function (event) {
     if (isMoving == true) {
@@ -345,9 +346,10 @@ sliderContainer.addEventListener("mousedown", function (e) {
 });
 
 function stopMoving() {
+  addTransition(sliderContainer);
   isMoving = false;
   sliderContainer.removeAttribute("style");
-  if (Math.abs(moveX) >= 100) {
+  if (Math.abs(moveX) >= 50) {
     if (moveX > 0) {
       slidePrev();
     } else {
@@ -363,6 +365,7 @@ sliderContainer.addEventListener("touchstart", function (e) {
   clearSliderTimout();
   startX = e.touches[0].clientX;
   isMoving = true;
+  removeTransition(sliderContainer);
 
   this.addEventListener("touchmove", function (event) {
     if (isMoving == true) {
@@ -412,6 +415,15 @@ function addFadeIn() {
 
 addFadeIn();
 
+// change transition after dragging
+function addTransition(item) {
+  item.classList.remove("itemActive");
+}
+
+function removeTransition(item) {
+  item.classList.add("itemActive");
+}
+
 // close menu by swiping
 let mainMenu = document.getElementById("mainMenu");
 let movingSituation;
@@ -421,8 +433,8 @@ window.addEventListener("resize", moveMenu);
 moveMenu();
 
 function moveMenu() {
+  removeTransition(mainMenu);
   let pageWidth = window.innerWidth;
-  let menuWidth = mainMenu.getBoundingClientRect().width;
   if (pageWidth <= 768) {
     mainMenu.addEventListener("touchstart", function (e) {
       let menuCurrent = e.touches[0].clientX;
@@ -446,6 +458,7 @@ function moveMenu() {
 }
 
 function closeMenu() {
+  addTransition(mainMenu);
   movingSituation = false;
   document.documentElement.style.setProperty(`--menuWidth`, `80%`);
   if (menuChange > 100) {
@@ -554,7 +567,7 @@ function textsLanguage() {
     });
   };
 
-  xhttp.open("GET", `../personal/ln/${language}.json`);
+  xhttp.open("GET", `./ln/${language}.json`);
   xhttp.send();
 }
 
